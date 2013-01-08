@@ -10,14 +10,28 @@
 
 @implementation UIView (LLSemanticLayoutExtensions)
 
+#pragma mark Helpers
+
+- (BOOL) ll_isSibling:(UIView *)view
+{
+    return (view.superview != nil && self.superview != nil && view.superview == self.superview);
+}
+
+#pragma mark Alignment Based
+
 - (void) ll_alignToView:(UIView *)view withAlignment:(LLAlignment)alignment
 {
-    
+    [self ll_alignToView:view withAlignment:alignment andOffset:CGPointZero];
 }
 
 - (void) ll_alignToView:(UIView *)view withAlignment:(LLAlignment)alignment andOffset:(CGPoint)offset
 {
+    if(![self ll_isSibling:view])
+        return;
     
+    CGRect alignRect = [view convertRect:view.bounds toView:view.superview];
+    CGRect frame = LL_CGRectAlign(alignRect, frame, alignment);
+    self.frame = frame;
 }
 
 @end

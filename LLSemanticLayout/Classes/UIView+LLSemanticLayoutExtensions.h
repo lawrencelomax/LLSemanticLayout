@@ -11,6 +11,12 @@
 
 @interface UIView (LLSemanticLayoutExtensions)
 
+#pragma mark Helpers
+
+- (BOOL) ll_isSibling:(UIView *)view;
+
+#pragma mark Alignment Based
+
 - (void) ll_alignToView:(UIView *)view withAlignment:(LLAlignment)alignment;
 - (void) ll_alignToView:(UIView *)view withAlignment:(LLAlignment)alignment andOffset:(CGPoint)offset;
 
