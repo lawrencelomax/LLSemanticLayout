@@ -76,12 +76,17 @@ extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlign
 
 #pragma mark CGSize
 
+extern inline CGSize LL_CGSizeFloor(CGSize size);
+extern inline CGSize LL_CGSizeCeil(CGSize size);
 extern inline CGSize LL_CGSizeUnion(CGSize s1, CGSize s2);
 extern inline CGSize LL_CGSizeAdd(CGSize s1, CGSize s2);
 extern inline CGSize LL_CGSizeInset(CGSize size, CGFloat dw, CGFloat dh);
 extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment relativePosition);
 
 #pragma mark CGPoint
+
+extern inline CGPoint LL_CGPointFloor(CGPoint point);
+extern inline CGPoint LL_CGPointCeil(CGPoint point);
 
 extern inline CGPoint LL_CGPointAdd(CGPoint p1, CGPoint p2);
 extern inline CGPoint LL_CGPointSubtract(CGPoint minuend, CGPoint subtrahend);

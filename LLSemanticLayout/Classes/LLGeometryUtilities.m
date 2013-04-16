@@ -146,6 +146,18 @@ extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlign
 
 #pragma mark CGSize
 
+extern inline CGSize LL_CGSizeFloor(CGSize size)
+{
+    CGSize result = CGSizeMake(floorf(size.width), floorf(size.height));
+    return result;
+}
+
+extern inline CGSize LL_CGSizeCeil(CGSize size)
+{
+    CGSize result = CGSizeMake(ceilf(size.width), ceilf(size.height));
+    return result;
+}
+
 extern inline CGSize LL_CGSizeUnion(CGSize s1, CGSize s2)
 {
     CGRect r1 = LL_CGRectZeroOriginWithSize(s1);
@@ -178,6 +190,18 @@ extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment alignmen
 }
 
 #pragma mark CGPoint
+
+extern inline CGPoint LL_CGPointFloor(CGPoint point)
+{
+    CGPoint result = CGPointMake(floorf(point.x), floorf(point.y));
+    return result;
+}
+
+extern inline CGPoint LL_CGPointCeil(CGPoint point)
+{
+    CGPoint result = CGPointMake(ceilf(point.x), ceilf(point.y));
+    return result;    
+}
 
 extern inline CGPoint LL_CGPointSubtract(CGPoint minuend, CGPoint subtrahend)
 {
