@@ -68,11 +68,15 @@ typedef enum{
 
 #pragma mark CGRect
 
+extern inline CGRect LL_CGRectFloor(CGRect rect);
+extern inline CGRect LL_CGRectCeil(CGRect rect);
+                                    
 extern inline CGRect LL_CGRectZeroOriginWithSize(CGSize size);
 extern inline CGRect LL_CGRectInset(CGRect rect, UIEdgeInsets edgeInsets);
-extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
 extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset);
 extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlignment alignment);
+
+extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
 
 #pragma mark CGSize
 

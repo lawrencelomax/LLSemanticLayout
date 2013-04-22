@@ -10,6 +10,22 @@
 
 #pragma mark CGRect
 
+extern inline CGRect LL_CGRectFloor(CGRect rect)
+{
+    CGRect retRect;
+    retRect.origin = LL_CGPointFloor(rect.origin);
+    retRect.size = LL_CGSizeFloor(rect.size);
+    return retRect;
+}
+
+extern inline CGRect LL_CGRectCeil(CGRect rect)
+{
+    CGRect retRect;
+    retRect.origin = LL_CGPointCeil(rect.origin);
+    retRect.size = LL_CGSizeCeil(rect.size);
+    return retRect;
+}
+
 extern inline CGRect LL_CGRectZeroOriginWithSize(CGSize size)
 {
     CGRect rect = CGRectZero;
