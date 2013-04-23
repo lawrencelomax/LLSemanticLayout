@@ -268,6 +268,14 @@ extern inline CGPoint LL_CGPointNormalize(CGPoint point)
     return result;
 }
 
+#pragma mark UIEdgeInsets
+
+extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets)
+{
+    CGRect result = CGRectMake(frame.origin.x + edgeInsets.left, frame.origin.y + edgeInsets.top, frame.size.width + edgeInsets.left + edgeInsets.right, frame.size.height + edgeInsets.top + edgeInsets.bottom);
+    return result;
+}
+
 #pragma mark CGAffineTransform
 
 extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transform)

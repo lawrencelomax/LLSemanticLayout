@@ -103,6 +103,9 @@ extern inline CGFloat LL_CGPointMagnitude(CGPoint p1);
 extern inline CGPoint LL_CGPointClamp(CGPoint min, CGPoint max, CGPoint value);
 extern inline CGPoint LL_CGPointNormalize(CGPoint point);
 
+#pragma mark UIEdgeInsets
+extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets);
+
 #pragma mark CGAffineTransform
 
 extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transform);
