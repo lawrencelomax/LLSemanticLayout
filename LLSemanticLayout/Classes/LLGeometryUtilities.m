@@ -276,6 +276,12 @@ extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets)
     return result;
 }
 
+extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets)
+{
+    UIEdgeInsets result = UIEdgeInsetsMake(fabsf(edgeInsets.top), fabsf(edgeInsets.left), fabsf(edgeInsets.bottom), fabsf(edgeInsets.right));
+    return result;
+}
+
 #pragma mark CGAffineTransform
 
 extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transform)

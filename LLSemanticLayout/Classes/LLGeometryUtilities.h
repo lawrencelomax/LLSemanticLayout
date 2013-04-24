@@ -105,6 +105,8 @@ extern inline CGPoint LL_CGPointNormalize(CGPoint point);
 
 #pragma mark UIEdgeInsets
 extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets);
+extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets);
+
 
 #pragma mark CGAffineTransform
 
