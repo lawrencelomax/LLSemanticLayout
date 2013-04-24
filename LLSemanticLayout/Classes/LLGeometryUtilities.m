@@ -8,6 +8,35 @@
 
 #import "LLGeometryUtilities.h"
 
+#pragma mark CGFloat
+
+extern inline CGFloat LL_CGFloatFloor(CGFloat value)
+{
+#ifdef CGFLOAT_IS_DOUBLE
+    return floor(value);
+#else
+    return floorf(value);
+#endif
+}
+
+extern inline CGFloat LL_CGFloatCeil(CGFloat value)
+{
+#ifdef CGFLOAT_IS_DOUBLE
+    return ceil(value);
+#else
+    return ceilf(value);
+#endif
+}
+
+extern inline CGFloat LL_CGFloatAbs(CGFloat value)
+{
+#ifdef CGFLOAT_IS_DOUBLE
+    return abs(value);
+#else
+    return absf(value);
+#endif
+}
+
 #pragma mark CGRect
 
 extern inline CGRect LL_CGRectFloor(CGRect rect)
@@ -164,13 +193,13 @@ extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlign
 
 extern inline CGSize LL_CGSizeFloor(CGSize size)
 {
-    CGSize result = CGSizeMake(floorf(size.width), floorf(size.height));
+    CGSize result = CGSizeMake(LL_CGFloatFloor(size.width), LL_CGFloatFloor(size.height));
     return result;
 }
 
 extern inline CGSize LL_CGSizeCeil(CGSize size)
 {
-    CGSize result = CGSizeMake(ceilf(size.width), ceilf(size.height));
+    CGSize result = CGSizeMake(LL_CGFloatCeil(size.width), LL_CGFloatCeil(size.height));
     return result;
 }
 
@@ -209,13 +238,13 @@ extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment alignmen
 
 extern inline CGPoint LL_CGPointFloor(CGPoint point)
 {
-    CGPoint result = CGPointMake(floorf(point.x), floorf(point.y));
+    CGPoint result = CGPointMake(LL_CGFloatFloor(point.x), LL_CGFloatFloor(point.y));
     return result;
 }
 
 extern inline CGPoint LL_CGPointCeil(CGPoint point)
 {
-    CGPoint result = CGPointMake(ceilf(point.x), ceilf(point.y));
+    CGPoint result = CGPointMake(LL_CGFloatCeil(point.x), LL_CGFloatCeil(point.y));
     return result;    
 }
 
@@ -278,7 +307,13 @@ extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets)
 
 extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets)
 {
-    UIEdgeInsets result = UIEdgeInsetsMake(fabsf(edgeInsets.top), fabsf(edgeInsets.left), fabsf(edgeInsets.bottom), fabsf(edgeInsets.right));
+    UIEdgeInsets result = UIEdgeInsetsMake(LL_CGFloatAbs(edgeInsets.top), LL_CGFloatAbs(edgeInsets.left), LL_CGFloatAbs(edgeInsets.bottom), LL_CGFloatAbs(edgeInsets.right));
+    return result;
+}
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets edgeInsets, UIEdgeInsets minimumEdgeInsets)
+{
+    UIEdgeInsets result = UIEdgeInsetsMake(LLMin(edgeInsets.top, minimumEdgeInsets.top), LLMin(edgeInsets.left, minimumEdgeInsets.left), LLMin(edgeInsets.bottom, minimumEdgeInsets.bottom), LLMin(edgeInsets.right, minimumEdgeInsets.right));
     return result;
 }
 

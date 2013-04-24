@@ -10,20 +10,22 @@
 #import <UIKit/UIKit.h>
 
 #ifndef LLMax
-#define LLMax(val1, val2) ((val1 > val2) ? val1 : val2)
+#define LLMax(value, max) ((value > max) ? max : value)
 #endif
 
 #ifndef LLMin
-#define LLMin(val1, val2) ((val1 < val2) ? val1 : val2)
+#define LLMin(value, min) ((value < min) ? min : value)
 #endif
 
 #ifndef LLClamp
-#define LLClamp(min, max, val) ((val < min) ? min : ((val > max) ? max : val))
+#define LLClamp(min, max, value) ((value < min) ? min : ((value > max) ? max : value))
 #endif
 
 #ifndef LLScale
 #define LLScale(minStart, maxStart, minEnd, maxEnd, value) ( minEnd + (value * (maxEnd - minEnd)) )
 #endif
+
+#define LLDegreesToRadians(x) (M_PI * x / 180.0)
 
 typedef enum{
     // Vertical Aligment
@@ -64,7 +66,11 @@ typedef enum{
     LLAlignmentToRightOf = LLAlignmentRightOutside
 } LLAlignment;
 
-#define LLDegreesToRadians(x) (M_PI * x / 180.0)
+#pragma mark CGFloat
+
+extern inline CGFloat LL_CGFloatFloor(CGFloat value);
+extern inline CGFloat LL_CGFloatCeil(CGFloat value);
+extern inline CGFloat LL_CGFloatAbs(CGFloat value);
 
 #pragma mark CGRect
 
@@ -104,9 +110,10 @@ extern inline CGPoint LL_CGPointClamp(CGPoint min, CGPoint max, CGPoint value);
 extern inline CGPoint LL_CGPointNormalize(CGPoint point);
 
 #pragma mark UIEdgeInsets
+
 extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets);
 extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets);
-
+extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets edgeInsets, UIEdgeInsets minimumEdgeInsets);
 
 #pragma mark CGAffineTransform
 
