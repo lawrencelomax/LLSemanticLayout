@@ -79,8 +79,11 @@ extern inline CGRect LL_CGRectCeil(CGRect rect);
                                     
 extern inline CGRect LL_CGRectZeroOriginWithSize(CGSize size);
 extern inline CGRect LL_CGRectInset(CGRect rect, UIEdgeInsets edgeInsets);
+
 extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset);
 extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlignment alignment);
+extern inline CGRect LL_CGRectPlaceSizeWithOffset(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset);
+extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLAlignment alignment);
 
 extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
 

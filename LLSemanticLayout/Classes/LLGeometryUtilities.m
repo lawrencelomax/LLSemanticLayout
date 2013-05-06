@@ -186,7 +186,17 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
 
 extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlignment alignment)
 {
-    return LL_CGRectAlignWithOffset(alignRect, rect, alignment, CGPointMake(0.0f, 0.0f));
+    return LL_CGRectAlignWithOffset(alignRect, rect, alignment, CGPointZero);
+}
+
+extern inline CGRect LL_CGRectPlaceSizeWithOffset(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset)
+{
+    return LL_CGRectAlignWithOffset(alignRect, LL_CGRectZeroOriginWithSize(size), alignment, offset);
+}
+
+extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLAlignment alignment)
+{
+    return LL_CGRectPlaceSizeWithOffset(alignRect, size, alignment, CGPointZero);
 }
 
 #pragma mark CGSize
