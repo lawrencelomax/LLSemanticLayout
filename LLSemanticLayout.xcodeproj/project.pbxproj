@@ -20,6 +20,9 @@
 		2152FA201749AA85002857FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2152FA1F1749AA85002857FF /* Default@2x.png */; };
 		2152FA221749AA85002857FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2152FA211749AA85002857FF /* Default-568h@2x.png */; };
 		2152FA281749ABCD002857FF /* LLGeometryUtilitiesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */; };
+		2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */; };
+		2152FA2B1749AD5A002857FF /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
+		2152FA2C1749AD5D002857FF /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
 		F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,7 @@
 		2152FA211749AA85002857FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2152FA261749AB99002857FF /* LLSemanticLayout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLSemanticLayout-Prefix.pch"; sourceTree = "<group>"; };
 		2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLGeometryUtilitiesSpec.m; path = LLSemanticLayoutTests/LLGeometryUtilitiesSpec.m; sourceTree = SOURCE_ROOT; };
+		2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayoutSpec.m"; sourceTree = "<group>"; };
 		21B2E8FD169BDE8600C9DE28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		21B2E90C169BDE8600C9DE28 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		21B2E90E169BDE8600C9DE28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -46,8 +50,8 @@
 		21B2E918169BDE8600C9DE28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21B2E92D169BDF1A00C9DE28 /* LLGeometryUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLGeometryUtilities.h; sourceTree = "<group>"; };
 		21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLGeometryUtilities.m; sourceTree = "<group>"; };
-		21B2E930169BDFE900C9DE28 /* UIView+LLSemanticLayoutExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLSemanticLayoutExtensions.h"; sourceTree = "<group>"; };
-		21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayoutExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayoutExtensions.m"; sourceTree = "<group>"; };
+		21B2E930169BDFE900C9DE28 /* UIView+LLSemanticLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLSemanticLayout.h"; sourceTree = "<group>"; };
+		21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayout.m"; sourceTree = "<group>"; };
 		21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LLSemanticLayout.podspec; sourceTree = "<group>"; };
 		48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiUnitTest.xcconfig"; path = "Pods/Pods-KiwiUnitTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiUnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +87,7 @@
 			children = (
 				2100543D1730EFC6006E5BE8 /* Supporting Files */,
 				2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */,
+				2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */,
 			);
 			path = KiwiUnitTest;
 			sourceTree = "<group>";
@@ -186,8 +191,8 @@
 			children = (
 				21B2E92D169BDF1A00C9DE28 /* LLGeometryUtilities.h */,
 				21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */,
-				21B2E930169BDFE900C9DE28 /* UIView+LLSemanticLayoutExtensions.h */,
-				21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayoutExtensions.m */,
+				21B2E930169BDFE900C9DE28 /* UIView+LLSemanticLayout.h */,
+				21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FA281749ABCD002857FF /* LLGeometryUtilitiesSpec.m in Sources */,
+				2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +345,8 @@
 			files = (
 				2152FA181749AA85002857FF /* main.m in Sources */,
 				2152FA1C1749AA85002857FF /* AppDelegate.m in Sources */,
+				2152FA2B1749AD5A002857FF /* LLGeometryUtilities.m in Sources */,
+				2152FA2C1749AD5D002857FF /* UIView+LLSemanticLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LLSemanticLayout.app/LLSemanticLayout";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -380,6 +389,7 @@
 				INFOPLIST_FILE = "KiwiUnitTest/KiwiUnitTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "${BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -388,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LLSemanticLayout.app/LLSemanticLayout";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -400,6 +411,7 @@
 				INFOPLIST_FILE = "KiwiUnitTest/KiwiUnitTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "${BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

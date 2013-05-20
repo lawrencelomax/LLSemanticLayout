@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LLGeometryUtilities.h"
 
-@interface UIView (LLSemanticLayoutExtensions)
+@interface UIView (LLSemanticLayout)
 
 #pragma mark Helpers
 

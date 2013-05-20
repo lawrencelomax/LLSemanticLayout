@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Lawrence Lomax. All rights reserved.
 //
 
-#import "UIView+LLSemanticLayoutExtensions.h"
+#import "UIView+LLSemanticLayout.h"
 
-@implementation UIView (LLSemanticLayoutExtensions)
+@implementation UIView (LLSemanticLayout)
 
 #pragma mark Helpers
 
