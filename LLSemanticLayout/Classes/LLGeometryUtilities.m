@@ -28,12 +28,22 @@ extern inline CGFloat LL_CGFloatCeil(CGFloat value)
 #endif
 }
 
+extern inline CGFloat LL_CGFloatRound(CGFloat value)
+{
+#ifdef CGFLOAT_IS_DOUBLE
+    return ceil(value);
+#else
+    return ceilf(value);
+#endif
+    
+}
+
 extern inline CGFloat LL_CGFloatAbs(CGFloat value)
 {
 #ifdef CGFLOAT_IS_DOUBLE
-    return abs(value);
+    return round(value);
 #else
-    return absf(value);
+    return roundf(value);
 #endif
 }
 
@@ -52,6 +62,14 @@ extern inline CGRect LL_CGRectCeil(CGRect rect)
     CGRect retRect;
     retRect.origin = LL_CGPointCeil(rect.origin);
     retRect.size = LL_CGSizeCeil(rect.size);
+    return retRect;
+}
+
+extern inline CGRect LL_CGRectRound(CGRect rect)
+{
+    CGRect retRect;
+    retRect.origin = LL_CGPointRound(rect.origin);
+    retRect.size = LL_CGSizeRound(rect.size);
     return retRect;
 }
 
@@ -138,7 +156,7 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
             rect.origin.x = CGRectGetMinX(alignRect) - (CGRectGetWidth(rect) / 2) + offset.x;
             break;
         case LLAlignmentRightInside:
-            rect.origin.x = CGRectGetMaxX(alignRect) - CGRectGetWidth(rect) - offset.x;
+            rect.origin.x = CGRectGetMaxX(alignRect) - CGRectGetWidth(rect) + offset.x;
             break;
         case LLAlignmentRightOutside:
             rect.origin.x = CGRectGetMaxX(alignRect) + offset.x;
@@ -213,6 +231,12 @@ extern inline CGSize LL_CGSizeCeil(CGSize size)
     return result;
 }
 
+extern inline CGSize LL_CGSizeRound(CGSize size)
+{
+    CGSize result = CGSizeMake(LL_CGFloatRound(size.width), LL_CGFloatRound(size.height));
+    return result;
+}
+
 extern inline CGSize LL_CGSizeUnion(CGSize s1, CGSize s2)
 {
     CGRect r1 = LL_CGRectZeroOriginWithSize(s1);
@@ -256,6 +280,12 @@ extern inline CGPoint LL_CGPointCeil(CGPoint point)
 {
     CGPoint result = CGPointMake(LL_CGFloatCeil(point.x), LL_CGFloatCeil(point.y));
     return result;    
+}
+
+extern inline CGPoint LL_CGPointRound(CGPoint point)
+{
+    CGPoint result = CGPointMake(LL_CGFloatRound(point.x), LL_CGFloatRound(point.y));
+    return result;
 }
 
 extern inline CGPoint LL_CGPointSubtract(CGPoint minuend, CGPoint subtrahend)
@@ -318,6 +348,24 @@ extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets)
 extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets)
 {
     UIEdgeInsets result = UIEdgeInsetsMake(LL_CGFloatAbs(edgeInsets.top), LL_CGFloatAbs(edgeInsets.left), LL_CGFloatAbs(edgeInsets.bottom), LL_CGFloatAbs(edgeInsets.right));
+    return result;
+}
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsCeil(UIEdgeInsets edgeInsets)
+{
+    UIEdgeInsets result = UIEdgeInsetsMake(LL_CGFloatCeil(edgeInsets.top), LL_CGFloatCeil(edgeInsets.left), LL_CGFloatCeil(edgeInsets.bottom), LL_CGFloatCeil(edgeInsets.right));
+    return result;
+}
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsFloor(UIEdgeInsets edgeInsets)
+{
+    UIEdgeInsets result = UIEdgeInsetsMake(LL_CGFloatFloor(edgeInsets.top), LL_CGFloatFloor(edgeInsets.left), LL_CGFloatFloor(edgeInsets.bottom), LL_CGFloatFloor(edgeInsets.right));
+    return result;
+}
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsRound(UIEdgeInsets edgeInsets)
+{
+    UIEdgeInsets result = UIEdgeInsetsMake(LL_CGFloatRound(edgeInsets.top), LL_CGFloatRound(edgeInsets.left), LL_CGFloatRound(edgeInsets.bottom), LL_CGFloatRound(edgeInsets.right));
     return result;
 }
 

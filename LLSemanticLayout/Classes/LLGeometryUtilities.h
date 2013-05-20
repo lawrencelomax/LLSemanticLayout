@@ -70,12 +70,14 @@ typedef enum{
 
 extern inline CGFloat LL_CGFloatFloor(CGFloat value);
 extern inline CGFloat LL_CGFloatCeil(CGFloat value);
+extern inline CGFloat LL_CGFloatRound(CGFloat value);
 extern inline CGFloat LL_CGFloatAbs(CGFloat value);
 
 #pragma mark CGRect
 
 extern inline CGRect LL_CGRectFloor(CGRect rect);
 extern inline CGRect LL_CGRectCeil(CGRect rect);
+extern inline CGRect LL_CGRectRound(CGRect rect);
                                     
 extern inline CGRect LL_CGRectZeroOriginWithSize(CGSize size);
 extern inline CGRect LL_CGRectInset(CGRect rect, UIEdgeInsets edgeInsets);
@@ -91,6 +93,8 @@ extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
 
 extern inline CGSize LL_CGSizeFloor(CGSize size);
 extern inline CGSize LL_CGSizeCeil(CGSize size);
+extern inline CGSize LL_CGSizeRound(CGSize size);
+
 extern inline CGSize LL_CGSizeUnion(CGSize s1, CGSize s2);
 extern inline CGSize LL_CGSizeAdd(CGSize s1, CGSize s2);
 extern inline CGSize LL_CGSizeInset(CGSize size, CGFloat dw, CGFloat dh);
@@ -100,6 +104,7 @@ extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment relative
 
 extern inline CGPoint LL_CGPointFloor(CGPoint point);
 extern inline CGPoint LL_CGPointCeil(CGPoint point);
+extern inline CGPoint LL_CGPointRound(CGPoint point);
 
 extern inline CGPoint LL_CGPointAdd(CGPoint p1, CGPoint p2);
 extern inline CGPoint LL_CGPointSubtract(CGPoint minuend, CGPoint subtrahend);
@@ -116,6 +121,9 @@ extern inline CGPoint LL_CGPointNormalize(CGPoint point);
 
 extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets);
 extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets);
+extern inline UIEdgeInsets LL_UIEdgeInsetsCeil(UIEdgeInsets edgeInsets);
+extern inline UIEdgeInsets LL_UIEdgeInsetsFloor(UIEdgeInsets edgeInsets);
+extern inline UIEdgeInsets LL_UIEdgeInsetsRound(UIEdgeInsets edgeInsets);
 extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets edgeInsets, UIEdgeInsets minimumEdgeInsets);
 
 #pragma mark CGAffineTransform
