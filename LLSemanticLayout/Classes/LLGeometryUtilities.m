@@ -162,7 +162,7 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
             rect.origin.x = CGRectGetMaxX(alignRect) + offset.x;
             break;
         case LLAlignmentRightOn:
-            rect.origin.x = CGRectGetMaxX(alignRect) - (CGRectGetWidth(rect) / 2) - offset.x;
+            rect.origin.x = CGRectGetMaxX(alignRect) - (CGRectGetWidth(rect) / 2) + offset.x;
             break;
         case LLAlignmentCenterHorizontal:
             rect.origin.x = CGRectGetMidX(alignRect) - (CGRectGetWidth(rect) / 2) + offset.x;
@@ -178,19 +178,19 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
             rect.origin.y = CGRectGetMinY(alignRect) + offset.y;
             break;
         case LLAlignmentTopOutside:
-            rect.origin.y = CGRectGetMinY(alignRect) - CGRectGetHeight(rect) - offset.y;
+            rect.origin.y = CGRectGetMinY(alignRect) - CGRectGetHeight(rect) + offset.y;
             break;
         case LLAlignmentTopOn:
             rect.origin.y = CGRectGetMinY(alignRect) - (CGRectGetHeight(rect) / 2) + offset.y;
             break;
         case LLAlignmentBottomInside:
-            rect.origin.y = CGRectGetMaxY(alignRect) - CGRectGetHeight(rect) - offset.y;
+            rect.origin.y = CGRectGetMaxY(alignRect) - CGRectGetHeight(rect) + offset.y;
             break;
         case LLAlignmentBottomOutside:
             rect.origin.y = CGRectGetMaxY(alignRect) + offset.y;
             break;
         case LLAlignmentBottomOn:
-            rect.origin.y = CGRectGetMinY(alignRect) - (CGRectGetHeight(rect) / 2) - offset.y;
+            rect.origin.y = CGRectGetMinY(alignRect) - (CGRectGetHeight(rect) / 2) + offset.y;
             break;
         case LLAlignmentCenterVertical:
             rect.origin.y = CGRectGetMidY(alignRect) - (CGRectGetHeight(rect) / 2) + offset.y;
