@@ -9,6 +9,61 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// Define LLNAMESPACE if you want non-prefixed versions of the functions. This has been done to avoid namespace collisions
+#ifdef LLNAMESPACE
+
+#define CGFloatFloor LL_CGFloatFloor
+#define CGFloatCeil LL_CGFloatCeil
+#define CGFloatRound LL_CGFloatRound
+#define CGFloatAbs LL_CGFloatAbs
+#define CGRectFloor LL_CGRectFloor
+#define CGRectCeil LL_CGRectCeil
+#define CGRectRound LL_CGRectRound
+
+#define CGRectZeroOriginWithSize LL_CGRectZeroOriginWithSize
+#define CGRectInset LL_CGRectInset
+
+#define CGRectAlignWithOffset LL_CGRectAlignWithOffset
+#define CGRectAlign LL_CGRectAlign
+#define CGRectPlaceSizeWithOffset LL_CGRectPlaceSizeWithOffset
+#define CGRectPlaceSize LL_CGRectPlaceSize
+
+#define CGRectGetPoint LL_CGRectGetPoint
+
+#define CGSizeFloor LL_CGSizeFloor
+#define CGSizeCeil LL_CGSizeCeil
+#define CGSizeRound LL_CGSizeRound
+
+#define CGSizeUnion LL_CGSizeUnion
+#define CGSizeAdd LL_CGSizeAdd
+#define CGSizeInset LL_CGSizeInset
+#define CGSizeCombine LL_CGSizeCombine
+
+#define CGPointFloor LL_CGPointFloor
+#define CGPointFloor LL_CGPointCeil
+#define CGPointRound LL_CGPointRound
+
+#define CGPointAdd LL_CGPointAdd
+#define CGPointSubtract LL_CGPointSubtract
+
+#define CGPointModulus LL_CGPointModulus
+#define CGPointScalarMultiply LL_CGPointScalarMultiply
+#define CGPointScalarDivide LL_CGPointScalarDivide
+
+#define CGPointMagnitude LL_CGPointMagnitude
+#define CGPointClamp LL_CGPointClamp
+#define CGPointNormalize LL_CGPointNormalize
+
+#define UIEdgeInsetsAdd LL_UIEdgeInsetsAdd
+#define UIEdgeInsetsAbs LL_UIEdgeInsetsAbs
+#define UIEdgeInsetsCeil LL_UIEdgeInsetsCeil
+#define UIEdgeInsetsFloor LL_UIEdgeInsetsFloor
+#define UIEdgeInsetsRound LL_UIEdgeInsetsRound
+#define UIEdgeInsetsMin LL_UIEdgeInsetsMin
+
+#endif
+
+
 #ifndef LLMax
 #define LLMax(value, max) ((value > max) ? max : value)
 #endif
