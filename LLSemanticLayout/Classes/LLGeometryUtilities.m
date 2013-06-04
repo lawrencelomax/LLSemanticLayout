@@ -339,10 +339,16 @@ extern inline CGPoint LL_CGPointNormalize(CGPoint point)
 
 #pragma mark UIEdgeInsets
 
-extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets)
+extern inline UIEdgeInsets LL_UIEdgeInsetsAdd(UIEdgeInsets first, UIEdgeInsets second)
 {
-    CGRect result = CGRectMake(frame.origin.x + edgeInsets.left, frame.origin.y + edgeInsets.top, frame.size.width + edgeInsets.left + edgeInsets.right, frame.size.height + edgeInsets.top + edgeInsets.bottom);
-    return result;
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(first.top + second.top, first.left + second.left, first.bottom + second.bottom, first.right + second.right);
+    return edgeInsets;
+}
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsSubtract(UIEdgeInsets first, UIEdgeInsets second)
+{
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(first.top - second.top, first.left - second.left, first.bottom - second.bottom, first.right - second.right);
+    return edgeInsets;
 }
 
 extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets)
@@ -369,9 +375,15 @@ extern inline UIEdgeInsets LL_UIEdgeInsetsRound(UIEdgeInsets edgeInsets)
     return result;
 }
 
-extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets edgeInsets, UIEdgeInsets minimumEdgeInsets)
+extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets first, UIEdgeInsets second)
 {
-    UIEdgeInsets result = UIEdgeInsetsMake(LLMin(edgeInsets.top, minimumEdgeInsets.top), LLMin(edgeInsets.left, minimumEdgeInsets.left), LLMin(edgeInsets.bottom, minimumEdgeInsets.bottom), LLMin(edgeInsets.right, minimumEdgeInsets.right));
+    UIEdgeInsets result = UIEdgeInsetsMake(MIN(first.top, second.top), MIN(first.left, second.left), MIN(first.bottom, second.bottom), MIN(first.right, second.right));
+    return result;
+}
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsMax(UIEdgeInsets first, UIEdgeInsets second)
+{
+    UIEdgeInsets result = UIEdgeInsetsMake(MAX(first.top, second.top), MAX(first.left, second.left), MAX(first.bottom, second.bottom), MAX(first.right, second.right));
     return result;
 }
 
@@ -383,6 +395,3 @@ extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transfor
     return value;
 }
 
-@implementation LLGeometryUtilities
-
-@end

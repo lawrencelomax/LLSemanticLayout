@@ -63,15 +63,6 @@
 
 #endif
 
-
-#ifndef LLMax
-#define LLMax(value, max) ((value > max) ? max : value)
-#endif
-
-#ifndef LLMin
-#define LLMin(value, min) ((value < min) ? min : value)
-#endif
-
 #ifndef LLClamp
 #define LLClamp(min, max, value) ((value < min) ? min : ((value > max) ? max : value))
 #endif
@@ -160,11 +151,11 @@ extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment relative
 extern inline CGPoint LL_CGPointFloor(CGPoint point);
 extern inline CGPoint LL_CGPointCeil(CGPoint point);
 extern inline CGPoint LL_CGPointRound(CGPoint point);
+extern inline CGPoint LL_CGPointModulus(CGPoint point);
 
 extern inline CGPoint LL_CGPointAdd(CGPoint p1, CGPoint p2);
 extern inline CGPoint LL_CGPointSubtract(CGPoint minuend, CGPoint subtrahend);
 
-extern inline CGPoint LL_CGPointModulus(CGPoint point);
 extern inline CGPoint LL_CGPointScalarMultiply(CGPoint point, CGFloat scalarValue);
 extern inline CGPoint LL_CGPointScalarDivide(CGPoint point, CGFloat divisor);
 
@@ -174,17 +165,17 @@ extern inline CGPoint LL_CGPointNormalize(CGPoint point);
 
 #pragma mark UIEdgeInsets
 
-extern inline CGRect LL_UIEdgeInsetsAdd(CGRect frame, UIEdgeInsets edgeInsets);
-extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets);
 extern inline UIEdgeInsets LL_UIEdgeInsetsCeil(UIEdgeInsets edgeInsets);
 extern inline UIEdgeInsets LL_UIEdgeInsetsFloor(UIEdgeInsets edgeInsets);
 extern inline UIEdgeInsets LL_UIEdgeInsetsRound(UIEdgeInsets edgeInsets);
-extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets edgeInsets, UIEdgeInsets minimumEdgeInsets);
+extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets);
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsAdd(UIEdgeInsets first, UIEdgeInsets second);
+extern inline UIEdgeInsets LL_UIEdgeInsetsSubtract(UIEdgeInsets first, UIEdgeInsets second);
+
+extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets first, UIEdgeInsets second);
+extern inline UIEdgeInsets LL_UIEdgeInsetsMax(UIEdgeInsets first, UIEdgeInsets second);
 
 #pragma mark CGAffineTransform
 
 extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transform);
-
-@interface LLGeometryUtilities : NSObject
-
-@end
