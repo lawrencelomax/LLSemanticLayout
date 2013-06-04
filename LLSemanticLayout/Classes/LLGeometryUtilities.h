@@ -54,12 +54,14 @@
 #define CGPointClamp LL_CGPointClamp
 #define CGPointNormalize LL_CGPointNormalize
 
+#define UIEdgeInsetsOffset LL_UIEdgeInsetsOffsetRect
 #define UIEdgeInsetsAdd LL_UIEdgeInsetsAdd
 #define UIEdgeInsetsAbs LL_UIEdgeInsetsAbs
 #define UIEdgeInsetsCeil LL_UIEdgeInsetsCeil
 #define UIEdgeInsetsFloor LL_UIEdgeInsetsFloor
 #define UIEdgeInsetsRound LL_UIEdgeInsetsRound
 #define UIEdgeInsetsMin LL_UIEdgeInsetsMin
+#define UIEdgeInsetsMax LL_UIEdgeInsetsMax
 
 #endif
 
@@ -136,6 +138,8 @@ extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLA
 extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
 
 #pragma mark CGSize
+
+extern inline CGRect LL_UIEdgeInsetsOffsetRect(CGRect rect, UIEdgeInsets edgeInsets);
 
 extern inline CGSize LL_CGSizeFloor(CGSize size);
 extern inline CGSize LL_CGSizeCeil(CGSize size);

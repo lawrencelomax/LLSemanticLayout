@@ -49,6 +49,13 @@ extern inline CGFloat LL_CGFloatAbs(CGFloat value)
 
 #pragma mark CGRect
 
+extern inline CGRect LL_UIEdgeInsetsOffsetRect(CGRect rect, UIEdgeInsets edgeInsets)
+{
+    CGRect result = CGRectMake(rect.origin.x + edgeInsets.left, rect.origin.y + edgeInsets.top,
+                               rect.size.width + edgeInsets.left + edgeInsets.right, rect.size.height + edgeInsets.top + edgeInsets.bottom);
+    return result;
+}
+
 extern inline CGRect LL_CGRectFloor(CGRect rect)
 {
     CGRect retRect;
