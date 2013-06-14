@@ -1,6 +1,6 @@
 platform :ios, '5.0'
 
-target :KiwiUnitTest, :exclusive => true do
+target :LLSemanticLayoutTests, :exclusive => true do
   pod 'Kiwi'
   pod 'OCHamcrest'
 end

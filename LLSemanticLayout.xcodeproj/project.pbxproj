@@ -19,7 +19,7 @@
 		21CB2D18176BD3BF0079094A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
 		21CB2D23176BD6BE0079094A /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
 		21CB2D24176BD6C10079094A /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
-		F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */; };
+		373EB0BF72024B339195AE39 /* libPods-LLSemanticLayoutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB952D4807424AD3A8815E8E /* libPods-LLSemanticLayoutTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,8 +51,9 @@
 		21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LLSemanticLayout.podspec; sourceTree = "<group>"; };
 		21CB2D10176BD2660079094A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21CB2D17176BD3BF0079094A /* libLLSemanticLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLLSemanticLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiUnitTest.xcconfig"; path = "Pods/Pods-KiwiUnitTest.xcconfig"; sourceTree = SOURCE_ROOT; };
+		2B2B3F6F602E4B2AA2F2B032 /* Pods-LLSemanticLayoutTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLSemanticLayoutTests.xcconfig"; path = "Pods/Pods-LLSemanticLayoutTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiUnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB952D4807424AD3A8815E8E /* libPods-LLSemanticLayoutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LLSemanticLayoutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +64,9 @@
 				21CB2D12176BD26B0079094A /* CoreGraphics.framework in Frameworks */,
 				21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */,
 				210054391730EFC6006E5BE8 /* SenTestingKit.framework in Frameworks */,
-				2100543A1730EFC6006E5BE8 /* UIKit.framework in Frameworks */,
 				2100543B1730EFC6006E5BE8 /* Foundation.framework in Frameworks */,
-				F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */,
+				2100543A1730EFC6006E5BE8 /* UIKit.framework in Frameworks */,
+				373EB0BF72024B339195AE39 /* libPods-LLSemanticLayoutTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,11 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */,
-				48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */,
 				21B2E8FC169BDE8600C9DE28 /* Frameworks */,
 				21B2E8FF169BDE8600C9DE28 /* LLSemanticLayout */,
 				21B2E914169BDE8600C9DE28 /* LLSemanticLayoutTests */,
 				21B2E8FB169BDE8600C9DE28 /* Products */,
+				2B2B3F6F602E4B2AA2F2B032 /* Pods-LLSemanticLayoutTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +111,7 @@
 				21B2E90E169BDE8600C9DE28 /* UIKit.framework */,
 				8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */,
 				2152FA0F1749AA85002857FF /* CoreGraphics.framework */,
+				DB952D4807424AD3A8815E8E /* libPods-LLSemanticLayoutTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,22 +157,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		210054371730EFC6006E5BE8 /* KiwiUnitTest */ = {
+		210054371730EFC6006E5BE8 /* LLSemanticLayoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "KiwiUnitTest" */;
+			buildConfigurationList = 210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "LLSemanticLayoutTests" */;
 			buildPhases = (
+				6474E934FBCD48FCA40F6F2A /* Check Pods Manifest.lock */,
 				C4B259F9AC5A4CA2BB5BF895 /* Check Pods Manifest.lock */,
 				210054331730EFC6006E5BE8 /* Sources */,
 				210054341730EFC6006E5BE8 /* Frameworks */,
 				210054351730EFC6006E5BE8 /* Resources */,
 				210054361730EFC6006E5BE8 /* ShellScript */,
 				67C99755A6C3433D86F23617 /* Copy Pods Resources */,
+				66FFA4A390C649658B890CFE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KiwiUnitTest;
+			name = LLSemanticLayoutTests;
 			productName = KiwiUnitTest;
 			productReference = 210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -213,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				210054371730EFC6006E5BE8 /* KiwiUnitTest */,
+				210054371730EFC6006E5BE8 /* LLSemanticLayoutTests */,
 				21CB2D16176BD3BF0079094A /* LLSemanticLayout */,
 			);
 		};
@@ -242,6 +246,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		6474E934FBCD48FCA40F6F2A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		66FFA4A390C649658B890CFE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-LLSemanticLayoutTests-resources.sh\"\n";
 		};
 		67C99755A6C3433D86F23617 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -310,7 +342,7 @@
 /* Begin XCBuildConfiguration section */
 		210054471730EFC6006E5BE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
+			baseConfigurationReference = 2B2B3F6F602E4B2AA2F2B032 /* Pods-LLSemanticLayoutTests.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -334,7 +366,7 @@
 		};
 		210054481730EFC6006E5BE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
+			baseConfigurationReference = 2B2B3F6F602E4B2AA2F2B032 /* Pods-LLSemanticLayoutTests.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -434,7 +466,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "KiwiUnitTest" */ = {
+		210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "LLSemanticLayoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				210054471730EFC6006E5BE8 /* Debug */,
