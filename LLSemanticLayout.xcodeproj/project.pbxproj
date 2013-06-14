@@ -23,6 +23,10 @@
 		2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */; };
 		2152FA2B1749AD5A002857FF /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
 		2152FA2C1749AD5D002857FF /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
+		21CB2D0E176BD21E0079094A /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
+		21CB2D0F176BD2210079094A /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
+		21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CB2D10176BD2660079094A /* QuartzCore.framework */; };
+		21CB2D12176BD26B0079094A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2152FA0F1749AA85002857FF /* CoreGraphics.framework */; };
 		F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,7 @@
 		21B2E930169BDFE900C9DE28 /* UIView+LLSemanticLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLSemanticLayout.h"; sourceTree = "<group>"; };
 		21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayout.m"; sourceTree = "<group>"; };
 		21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LLSemanticLayout.podspec; sourceTree = "<group>"; };
+		21CB2D10176BD2660079094A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiUnitTest.xcconfig"; path = "Pods/Pods-KiwiUnitTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiUnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CB2D12176BD26B0079094A /* CoreGraphics.framework in Frameworks */,
+				21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */,
 				210054391730EFC6006E5BE8 /* SenTestingKit.framework in Frameworks */,
 				2100543A1730EFC6006E5BE8 /* UIKit.framework in Frameworks */,
 				2100543B1730EFC6006E5BE8 /* Foundation.framework in Frameworks */,
@@ -129,6 +136,7 @@
 		21B2E8EF169BDE8600C9DE28 = {
 			isa = PBXGroup;
 			children = (
+				21CB2D10176BD2660079094A /* QuartzCore.framework */,
 				21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */,
 				21B2E8FF169BDE8600C9DE28 /* LLSemanticLayout */,
 				2152FA111749AA85002857FF /* LLSemanticLayoutApp */,
@@ -200,9 +208,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		210054371730EFC6006E5BE8 /* KiwiUnitTest */ = {
+		210054371730EFC6006E5BE8 /* LLSemanticLayoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "KiwiUnitTest" */;
+			buildConfigurationList = 210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "LLSemanticLayoutTests" */;
 			buildPhases = (
 				C4B259F9AC5A4CA2BB5BF895 /* Check Pods Manifest.lock */,
 				210054331730EFC6006E5BE8 /* Sources */,
@@ -215,7 +223,7 @@
 			);
 			dependencies = (
 			);
-			name = KiwiUnitTest;
+			name = LLSemanticLayoutTests;
 			productName = KiwiUnitTest;
 			productReference = 210054381730EFC6006E5BE8 /* KiwiUnitTest.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -259,7 +267,7 @@
 			projectRoot = "";
 			targets = (
 				2152FA0B1749AA85002857FF /* LLSemanticLayout */,
-				210054371730EFC6006E5BE8 /* KiwiUnitTest */,
+				210054371730EFC6006E5BE8 /* LLSemanticLayoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +344,8 @@
 			files = (
 				2152FA281749ABCD002857FF /* LLGeometryUtilitiesSpec.m in Sources */,
 				2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */,
+				21CB2D0E176BD21E0079094A /* LLGeometryUtilities.m in Sources */,
+				21CB2D0F176BD2210079094A /* UIView+LLSemanticLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +551,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "KiwiUnitTest" */ = {
+		210054461730EFC6006E5BE8 /* Build configuration list for PBXNativeTarget "LLSemanticLayoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				210054471730EFC6006E5BE8 /* Debug */,
