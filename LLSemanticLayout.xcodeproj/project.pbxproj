@@ -27,11 +27,27 @@
 		21CB2D0F176BD2210079094A /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
 		21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CB2D10176BD2660079094A /* QuartzCore.framework */; };
 		21CB2D12176BD26B0079094A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2152FA0F1749AA85002857FF /* CoreGraphics.framework */; };
+		21CB2D18176BD3BF0079094A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
+		21CB2D1D176BD3BF0079094A /* LLSemanticLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21CB2D1C176BD3BF0079094A /* LLSemanticLayout.h */; };
+		21CB2D1F176BD3BF0079094A /* LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CB2D1E176BD3BF0079094A /* LLSemanticLayout.m */; };
 		F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		21CB2D15176BD3BF0079094A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				21CB2D1D176BD3BF0079094A /* LLSemanticLayout.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		210054381730EFC6006E5BE8 /* KiwiUnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KiwiUnitTest.octest; path = LLSemanticLayoutTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLSemanticLayoutTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2100543E1730EFC6006E5BE8 /* KiwiUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiwiUnitTest-Info.plist"; sourceTree = "<group>"; };
 		210054401730EFC6006E5BE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		210054451730EFC6006E5BE8 /* KiwiUnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiwiUnitTest-Prefix.pch"; sourceTree = "<group>"; };
@@ -58,6 +74,10 @@
 		21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayout.m"; sourceTree = "<group>"; };
 		21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LLSemanticLayout.podspec; sourceTree = "<group>"; };
 		21CB2D10176BD2660079094A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		21CB2D17176BD3BF0079094A /* libLLSemanticLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLLSemanticLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		21CB2D1B176BD3BF0079094A /* LLSemanticLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LLSemanticLayout-Prefix.pch"; sourceTree = "<group>"; };
+		21CB2D1C176BD3BF0079094A /* LLSemanticLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSemanticLayout.h; sourceTree = "<group>"; };
+		21CB2D1E176BD3BF0079094A /* LLSemanticLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSemanticLayout.m; sourceTree = "<group>"; };
 		48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiUnitTest.xcconfig"; path = "Pods/Pods-KiwiUnitTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiUnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +103,14 @@
 				2152FA0D1749AA85002857FF /* UIKit.framework in Frameworks */,
 				2152FA0E1749AA85002857FF /* Foundation.framework in Frameworks */,
 				2152FA101749AA85002857FF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21CB2D14176BD3BF0079094A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21CB2D18176BD3BF0079094A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +168,7 @@
 				21B2E8FF169BDE8600C9DE28 /* LLSemanticLayout */,
 				2152FA111749AA85002857FF /* LLSemanticLayoutApp */,
 				2100543C1730EFC6006E5BE8 /* KiwiUnitTest */,
+				21CB2D19176BD3BF0079094A /* LLSemanticLayout */,
 				21B2E8FC169BDE8600C9DE28 /* Frameworks */,
 				21B2E914169BDE8600C9DE28 /* LLSemanticLayoutTests */,
 				21B2E8FB169BDE8600C9DE28 /* Products */,
@@ -150,8 +179,9 @@
 		21B2E8FB169BDE8600C9DE28 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				210054381730EFC6006E5BE8 /* KiwiUnitTest.octest */,
+				210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */,
 				2152FA0C1749AA85002857FF /* LLSemanticLayout.app */,
+				21CB2D17176BD3BF0079094A /* libLLSemanticLayout.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +235,24 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		21CB2D19176BD3BF0079094A /* LLSemanticLayout */ = {
+			isa = PBXGroup;
+			children = (
+				21CB2D1C176BD3BF0079094A /* LLSemanticLayout.h */,
+				21CB2D1E176BD3BF0079094A /* LLSemanticLayout.m */,
+				21CB2D1A176BD3BF0079094A /* Supporting Files */,
+			);
+			path = LLSemanticLayout;
+			sourceTree = "<group>";
+		};
+		21CB2D1A176BD3BF0079094A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21CB2D1B176BD3BF0079094A /* LLSemanticLayout-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -225,12 +273,12 @@
 			);
 			name = LLSemanticLayoutTests;
 			productName = KiwiUnitTest;
-			productReference = 210054381730EFC6006E5BE8 /* KiwiUnitTest.octest */;
+			productReference = 210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		2152FA0B1749AA85002857FF /* LLSemanticLayout */ = {
+		2152FA0B1749AA85002857FF /* LLSemanticLayoutApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2152FA231749AA85002857FF /* Build configuration list for PBXNativeTarget "LLSemanticLayout" */;
+			buildConfigurationList = 2152FA231749AA85002857FF /* Build configuration list for PBXNativeTarget "LLSemanticLayoutApp" */;
 			buildPhases = (
 				2152FA081749AA85002857FF /* Sources */,
 				2152FA091749AA85002857FF /* Frameworks */,
@@ -240,10 +288,27 @@
 			);
 			dependencies = (
 			);
-			name = LLSemanticLayout;
+			name = LLSemanticLayoutApp;
 			productName = LLSemanticLayout;
 			productReference = 2152FA0C1749AA85002857FF /* LLSemanticLayout.app */;
 			productType = "com.apple.product-type.application";
+		};
+		21CB2D16176BD3BF0079094A /* LLSemanticLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21CB2D20176BD3BF0079094A /* Build configuration list for PBXNativeTarget "LLSemanticLayout" */;
+			buildPhases = (
+				21CB2D13176BD3BF0079094A /* Sources */,
+				21CB2D14176BD3BF0079094A /* Frameworks */,
+				21CB2D15176BD3BF0079094A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LLSemanticLayout;
+			productName = LLSemanticLayout;
+			productReference = 21CB2D17176BD3BF0079094A /* libLLSemanticLayout.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,8 +331,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2152FA0B1749AA85002857FF /* LLSemanticLayout */,
+				2152FA0B1749AA85002857FF /* LLSemanticLayoutApp */,
 				210054371730EFC6006E5BE8 /* LLSemanticLayoutTests */,
+				21CB2D16176BD3BF0079094A /* LLSemanticLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +423,14 @@
 				2152FA1C1749AA85002857FF /* AppDelegate.m in Sources */,
 				2152FA2B1749AD5A002857FF /* LLGeometryUtilities.m in Sources */,
 				2152FA2C1749AD5D002857FF /* UIView+LLSemanticLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21CB2D13176BD3BF0079094A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21CB2D1F176BD3BF0079094A /* LLSemanticLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +622,38 @@
 			};
 			name = Release;
 		};
+		21CB2D21176BD3BF0079094A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/LLSemanticLayout.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LLSemanticLayout/LLSemanticLayout-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		21CB2D22176BD3BF0079094A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/LLSemanticLayout.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LLSemanticLayout/LLSemanticLayout-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,7 +666,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2152FA231749AA85002857FF /* Build configuration list for PBXNativeTarget "LLSemanticLayout" */ = {
+		2152FA231749AA85002857FF /* Build configuration list for PBXNativeTarget "LLSemanticLayoutApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2152FA241749AA85002857FF /* Debug */,
@@ -577,6 +683,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		21CB2D20176BD3BF0079094A /* Build configuration list for PBXNativeTarget "LLSemanticLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21CB2D21176BD3BF0079094A /* Debug */,
+				21CB2D22176BD3BF0079094A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
