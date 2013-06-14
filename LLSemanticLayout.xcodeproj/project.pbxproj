@@ -10,26 +10,13 @@
 		210054391730EFC6006E5BE8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E90C169BDE8600C9DE28 /* SenTestingKit.framework */; };
 		2100543A1730EFC6006E5BE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E90E169BDE8600C9DE28 /* UIKit.framework */; };
 		2100543B1730EFC6006E5BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
-		210054411730EFC6006E5BE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2100543F1730EFC6006E5BE8 /* InfoPlist.strings */; };
-		2152FA0D1749AA85002857FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E90E169BDE8600C9DE28 /* UIKit.framework */; };
-		2152FA0E1749AA85002857FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
-		2152FA101749AA85002857FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2152FA0F1749AA85002857FF /* CoreGraphics.framework */; };
-		2152FA181749AA85002857FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA171749AA85002857FF /* main.m */; };
-		2152FA1C1749AA85002857FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA1B1749AA85002857FF /* AppDelegate.m */; };
-		2152FA1E1749AA85002857FF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2152FA1D1749AA85002857FF /* Default.png */; };
-		2152FA201749AA85002857FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2152FA1F1749AA85002857FF /* Default@2x.png */; };
-		2152FA221749AA85002857FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2152FA211749AA85002857FF /* Default-568h@2x.png */; };
 		2152FA281749ABCD002857FF /* LLGeometryUtilitiesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */; };
 		2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */; };
-		2152FA2B1749AD5A002857FF /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
-		2152FA2C1749AD5D002857FF /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
 		21CB2D0E176BD21E0079094A /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
 		21CB2D0F176BD2210079094A /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
 		21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CB2D10176BD2660079094A /* QuartzCore.framework */; };
 		21CB2D12176BD26B0079094A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2152FA0F1749AA85002857FF /* CoreGraphics.framework */; };
 		21CB2D18176BD3BF0079094A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
-		21CB2D1D176BD3BF0079094A /* LLSemanticLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21CB2D1C176BD3BF0079094A /* LLSemanticLayout.h */; };
-		21CB2D1F176BD3BF0079094A /* LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CB2D1E176BD3BF0079094A /* LLSemanticLayout.m */; };
 		F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +27,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				21CB2D1D176BD3BF0079094A /* LLSemanticLayout.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,21 +34,9 @@
 
 /* Begin PBXFileReference section */
 		210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLSemanticLayoutTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2100543E1730EFC6006E5BE8 /* KiwiUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KiwiUnitTest-Info.plist"; sourceTree = "<group>"; };
-		210054401730EFC6006E5BE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		210054451730EFC6006E5BE8 /* KiwiUnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KiwiUnitTest-Prefix.pch"; sourceTree = "<group>"; };
-		2152FA0C1749AA85002857FF /* LLSemanticLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLSemanticLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2152FA0F1749AA85002857FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2152FA131749AA85002857FF /* LLSemanticLayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LLSemanticLayout-Info.plist"; sourceTree = "<group>"; };
-		2152FA171749AA85002857FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2152FA1A1749AA85002857FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2152FA1B1749AA85002857FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2152FA1D1749AA85002857FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		2152FA1F1749AA85002857FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		2152FA211749AA85002857FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2152FA261749AB99002857FF /* LLSemanticLayout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LLSemanticLayout-Prefix.pch"; sourceTree = "<group>"; };
 		2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLGeometryUtilitiesSpec.m; path = LLSemanticLayoutTests/LLGeometryUtilitiesSpec.m; sourceTree = SOURCE_ROOT; };
-		2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayoutSpec.m"; sourceTree = "<group>"; };
+		2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+LLSemanticLayoutSpec.m"; path = "../KiwiUnitTest/UIView+LLSemanticLayoutSpec.m"; sourceTree = "<group>"; };
 		21B2E8FD169BDE8600C9DE28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		21B2E90C169BDE8600C9DE28 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		21B2E90E169BDE8600C9DE28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -75,9 +49,6 @@
 		21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LLSemanticLayout.podspec; sourceTree = "<group>"; };
 		21CB2D10176BD2660079094A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21CB2D17176BD3BF0079094A /* libLLSemanticLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLLSemanticLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		21CB2D1B176BD3BF0079094A /* LLSemanticLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LLSemanticLayout-Prefix.pch"; sourceTree = "<group>"; };
-		21CB2D1C176BD3BF0079094A /* LLSemanticLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSemanticLayout.h; sourceTree = "<group>"; };
-		21CB2D1E176BD3BF0079094A /* LLSemanticLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSemanticLayout.m; sourceTree = "<group>"; };
 		48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiwiUnitTest.xcconfig"; path = "Pods/Pods-KiwiUnitTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KiwiUnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,16 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2152FA091749AA85002857FF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2152FA0D1749AA85002857FF /* UIKit.framework in Frameworks */,
-				2152FA0E1749AA85002857FF /* Foundation.framework in Frameworks */,
-				2152FA101749AA85002857FF /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21CB2D14176BD3BF0079094A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -117,62 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2100543C1730EFC6006E5BE8 /* KiwiUnitTest */ = {
-			isa = PBXGroup;
-			children = (
-				2100543D1730EFC6006E5BE8 /* Supporting Files */,
-				2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */,
-				2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */,
-			);
-			path = KiwiUnitTest;
-			sourceTree = "<group>";
-		};
-		2100543D1730EFC6006E5BE8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2100543E1730EFC6006E5BE8 /* KiwiUnitTest-Info.plist */,
-				2100543F1730EFC6006E5BE8 /* InfoPlist.strings */,
-				210054451730EFC6006E5BE8 /* KiwiUnitTest-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2152FA111749AA85002857FF /* LLSemanticLayoutApp */ = {
-			isa = PBXGroup;
-			children = (
-				2152FA1A1749AA85002857FF /* AppDelegate.h */,
-				2152FA1B1749AA85002857FF /* AppDelegate.m */,
-				2152FA121749AA85002857FF /* Supporting Files */,
-			);
-			name = LLSemanticLayoutApp;
-			path = LLSemanticLayout/TestApp;
-			sourceTree = "<group>";
-		};
-		2152FA121749AA85002857FF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2152FA131749AA85002857FF /* LLSemanticLayout-Info.plist */,
-				2152FA261749AB99002857FF /* LLSemanticLayout-Prefix.pch */,
-				2152FA171749AA85002857FF /* main.m */,
-				2152FA1D1749AA85002857FF /* Default.png */,
-				2152FA1F1749AA85002857FF /* Default@2x.png */,
-				2152FA211749AA85002857FF /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		21B2E8EF169BDE8600C9DE28 = {
 			isa = PBXGroup;
 			children = (
 				21B2E93D169BE41D00C9DE28 /* LLSemanticLayout.podspec */,
-				21B2E8FF169BDE8600C9DE28 /* LLSemanticLayout */,
-				2152FA111749AA85002857FF /* LLSemanticLayoutApp */,
-				2100543C1730EFC6006E5BE8 /* KiwiUnitTest */,
-				21CB2D19176BD3BF0079094A /* LLSemanticLayout */,
+				48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */,
 				21B2E8FC169BDE8600C9DE28 /* Frameworks */,
+				21B2E8FF169BDE8600C9DE28 /* LLSemanticLayout */,
 				21B2E914169BDE8600C9DE28 /* LLSemanticLayoutTests */,
 				21B2E8FB169BDE8600C9DE28 /* Products */,
-				48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */,
-				2152FA0C1749AA85002857FF /* LLSemanticLayout.app */,
 				21CB2D17176BD3BF0079094A /* libLLSemanticLayout.a */,
 			);
 			name = Products;
@@ -210,6 +123,8 @@
 		21B2E914169BDE8600C9DE28 /* LLSemanticLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
+				2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */,
+				2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */,
 				21B2E915169BDE8600C9DE28 /* Supporting Files */,
 			);
 			path = LLSemanticLayoutTests;
@@ -235,24 +150,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		21CB2D19176BD3BF0079094A /* LLSemanticLayout */ = {
-			isa = PBXGroup;
-			children = (
-				21CB2D1C176BD3BF0079094A /* LLSemanticLayout.h */,
-				21CB2D1E176BD3BF0079094A /* LLSemanticLayout.m */,
-				21CB2D1A176BD3BF0079094A /* Supporting Files */,
-			);
-			path = LLSemanticLayout;
-			sourceTree = "<group>";
-		};
-		21CB2D1A176BD3BF0079094A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				21CB2D1B176BD3BF0079094A /* LLSemanticLayout-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,23 +172,6 @@
 			productName = KiwiUnitTest;
 			productReference = 210054381730EFC6006E5BE8 /* LLSemanticLayoutTests.octest */;
 			productType = "com.apple.product-type.bundle";
-		};
-		2152FA0B1749AA85002857FF /* LLSemanticLayoutApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2152FA231749AA85002857FF /* Build configuration list for PBXNativeTarget "LLSemanticLayoutApp" */;
-			buildPhases = (
-				2152FA081749AA85002857FF /* Sources */,
-				2152FA091749AA85002857FF /* Frameworks */,
-				2152FA0A1749AA85002857FF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LLSemanticLayoutApp;
-			productName = LLSemanticLayout;
-			productReference = 2152FA0C1749AA85002857FF /* LLSemanticLayout.app */;
-			productType = "com.apple.product-type.application";
 		};
 		21CB2D16176BD3BF0079094A /* LLSemanticLayout */ = {
 			isa = PBXNativeTarget;
@@ -331,7 +211,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2152FA0B1749AA85002857FF /* LLSemanticLayoutApp */,
 				210054371730EFC6006E5BE8 /* LLSemanticLayoutTests */,
 				21CB2D16176BD3BF0079094A /* LLSemanticLayout */,
 			);
@@ -343,17 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210054411730EFC6006E5BE8 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2152FA0A1749AA85002857FF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2152FA1E1749AA85002857FF /* Default.png in Resources */,
-				2152FA201749AA85002857FF /* Default@2x.png in Resources */,
-				2152FA221749AA85002857FF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,36 +283,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2152FA081749AA85002857FF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2152FA181749AA85002857FF /* main.m in Sources */,
-				2152FA1C1749AA85002857FF /* AppDelegate.m in Sources */,
-				2152FA2B1749AD5A002857FF /* LLGeometryUtilities.m in Sources */,
-				2152FA2C1749AD5D002857FF /* UIView+LLSemanticLayout.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21CB2D13176BD3BF0079094A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CB2D1F176BD3BF0079094A /* LLSemanticLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2100543F1730EFC6006E5BE8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				210054401730EFC6006E5BE8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		21B2E917169BDE8600C9DE28 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -469,9 +317,7 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KiwiUnitTest/KiwiUnitTest-Prefix.pch";
-				INFOPLIST_FILE = "KiwiUnitTest/KiwiUnitTest-Info.plist";
+				INFOPLIST_FILE = "LLSemanticLayoutTests/LLSemanticLayoutTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -497,9 +343,7 @@
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KiwiUnitTest/KiwiUnitTest-Prefix.pch";
-				INFOPLIST_FILE = "KiwiUnitTest/KiwiUnitTest-Info.plist";
+				INFOPLIST_FILE = "LLSemanticLayoutTests/LLSemanticLayoutTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -509,69 +353,6 @@
 				TEST_HOST = "${BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) \"$(PROJECT_DIR)/Pods\"";
 				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
-		2152FA241749AA85002857FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LLSemanticLayout/TestApp/LLSemanticLayout-Prefix.pch";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "LLSemanticLayout/TestApp/LLSemanticLayout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-all_load",
-					"-ObjC",
-					"-framework",
-					Foundation,
-					"-framework",
-					UIKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		2152FA251749AA85002857FF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LLSemanticLayout/TestApp/LLSemanticLayout-Prefix.pch";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "LLSemanticLayout/TestApp/LLSemanticLayout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-all_load",
-					"-ObjC",
-					"-framework",
-					Foundation,
-					"-framework",
-					UIKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -662,15 +443,6 @@
 			buildConfigurations = (
 				210054471730EFC6006E5BE8 /* Debug */,
 				210054481730EFC6006E5BE8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2152FA231749AA85002857FF /* Build configuration list for PBXNativeTarget "LLSemanticLayoutApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2152FA241749AA85002857FF /* Debug */,
-				2152FA251749AA85002857FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
