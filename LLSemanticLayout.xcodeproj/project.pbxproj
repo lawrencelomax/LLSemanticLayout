@@ -17,6 +17,8 @@
 		21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CB2D10176BD2660079094A /* QuartzCore.framework */; };
 		21CB2D12176BD26B0079094A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2152FA0F1749AA85002857FF /* CoreGraphics.framework */; };
 		21CB2D18176BD3BF0079094A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
+		21CB2D23176BD6BE0079094A /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
+		21CB2D24176BD6C10079094A /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
 		F91271B0B0B84B138DDE1D62 /* libPods-KiwiUnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B21601740874CBDBD7C9F39 /* libPods-KiwiUnitTest.a */; };
 /* End PBXBuildFile section */
 
@@ -287,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21CB2D24176BD6C10079094A /* UIView+LLSemanticLayout.m in Sources */,
+				21CB2D23176BD6BE0079094A /* LLGeometryUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +312,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LLSemanticLayout.app/LLSemanticLayout";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libLLSemanticLayout.a";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -334,7 +338,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LLSemanticLayout.app/LLSemanticLayout";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LLSemanticLayout";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -410,8 +414,6 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				DSTROOT = /tmp/LLSemanticLayout.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LLSemanticLayout/LLSemanticLayout-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,8 +428,6 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				DSTROOT = /tmp/LLSemanticLayout.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LLSemanticLayout/LLSemanticLayout-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,6 +463,7 @@
 				21CB2D22176BD3BF0079094A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
