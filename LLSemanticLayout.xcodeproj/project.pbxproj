@@ -312,7 +312,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/libLLSemanticLayout.a";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -328,7 +327,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "${BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) \"$(PROJECT_DIR)/Pods\"";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -338,7 +336,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48DCA26DBF18486EBB5A20CE /* Pods-KiwiUnitTest.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LLSemanticLayout";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
@@ -354,7 +351,6 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "${BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) \"$(PROJECT_DIR)/Pods\"";
 				WRAPPER_EXTENSION = octest;
 			};
