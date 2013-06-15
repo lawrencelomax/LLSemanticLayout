@@ -12,10 +12,15 @@
 // Define LLNAMESPACE if you want non-prefixed versions of the functions. This has been done to avoid namespace collisions
 #ifdef LLNAMESPACE
 
+// CGFloat
+
 #define CGFloatFloor LL_CGFloatFloor
 #define CGFloatCeil LL_CGFloatCeil
 #define CGFloatRound LL_CGFloatRound
 #define CGFloatAbs LL_CGFloatAbs
+
+//CGRect
+
 #define CGRectFloor LL_CGRectFloor
 #define CGRectCeil LL_CGRectCeil
 #define CGRectRound LL_CGRectRound
@@ -30,6 +35,8 @@
 
 #define CGRectGetPoint LL_CGRectGetPoint
 
+// CGSize
+
 #define CGSizeFloor LL_CGSizeFloor
 #define CGSizeCeil LL_CGSizeCeil
 #define CGSizeRound LL_CGSizeRound
@@ -38,6 +45,8 @@
 #define CGSizeAdd LL_CGSizeAdd
 #define CGSizeInset LL_CGSizeInset
 #define CGSizeCombine LL_CGSizeCombine
+
+// CGPoint
 
 #define CGPointFloor LL_CGPointFloor
 #define CGPointFloor LL_CGPointCeil
@@ -53,6 +62,8 @@
 #define CGPointMagnitude LL_CGPointMagnitude
 #define CGPointClamp LL_CGPointClamp
 #define CGPointNormalize LL_CGPointNormalize
+
+//UIEdgeInsets
 
 #define UIEdgeInsetsOffset LL_UIEdgeInsetsOffsetRect
 #define UIEdgeInsetsAdd LL_UIEdgeInsetsAdd
@@ -75,7 +86,7 @@
 
 #define LLDegreesToRadians(x) (M_PI * x / 180.0)
 
-typedef enum{
+typedef NS_OPTIONS(NSUInteger, LLAlignment){
     // Vertical Aligment
     LLAlignmentTopInside = 1 << 1,
     LLAlignmentTopOutside = 1 << 2,
@@ -103,16 +114,20 @@ typedef enum{
     
     LLAlignmentCenterHorizontal = 1 << 14,
     LLAligmentHorizontal = (LLAlignmentLeftInside | LLAlignmentLeftOutside | LLAlignmentLeftOn | LLAlignmentRightInside | LLAlignmentRightOutside | LLAlignmentRightOn | LLAlignmentCenterHorizontal),
-    
+        
     // Composites
     LLAlignmentCenter = LLAlignmentCenterHorizontal | LLAlignmentCenterVertical,
+    LLAlignmentTopLeft = LLAlignmentTop | LLAlignmentLeft,
+    LLAlignmentTopRight = LLAlignmentTop | LLAlignmentRight,
+    LLAlignmentBottomLeft = LLAlignmentBottom | LLAlignmentLeft,
+    LLAlignmentBottomRight = LLAlignmentBottom | LLAlignmentRight,
     
     // Aliases
     LLAlignmentAbove = LLAlignmentTopOutside,
     LLAlignmentBelow = LLAlignmentBottomOutside,
     LLAlignmentToLeftOf = LLAlignmentLeftOutside,
-    LLAlignmentToRightOf = LLAlignmentRightOutside
-} LLAlignment;
+    LLAlignmentToRightOf = LLAlignmentRightOutside,
+};
 
 #pragma mark CGFloat
 
@@ -136,6 +151,7 @@ extern inline CGRect LL_CGRectPlaceSizeWithOffset(const CGRect alignRect, CGSize
 extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLAlignment alignment);
 
 extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
+
 
 #pragma mark CGSize
 
