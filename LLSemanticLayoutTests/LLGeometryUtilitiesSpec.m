@@ -22,6 +22,8 @@ describe(@"the geometry utilities", ^{
         
         context(@"LL_CGFloatCeil", ^{
         
+            it(@"sho", <#^(void)aBlock#>)
+            
         });
         
         context(@"LL_CGFloatRound", ^{
