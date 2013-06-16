@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
       :type => 'MIT',
       :file => 'LICENSE'
     }
-    s.source = { :git => 'https://github.com/lawrencelomax/LLSemanticLayout.git', :commit => '669d73302b41557e7d87f78501fe1c538d5b69c9' }
+    s.source = { :git => 'https://github.com/lawrencelomax/LLSemanticLayout.git', :commit => '1b5d8e86416bbc70325522fb211880e517f24ddc' }
     s.author = 'Lawrence Lomax'
     s.homepage = 'https://github.com/lawrencelomax/LLSemanticLayout'
     s.platform = :ios, '5.0'
