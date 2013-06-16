@@ -86,6 +86,116 @@ describe(@"the geometry utilities", ^{
         
     });
     
+    context(@"aligning rectangles", ^{
+       
+        const CGRect alignRect = CGRectMake(100, 100, 100, 100);
+        const CGRect placementRect = CGRectMake(10, 10, 10, 10);
+        
+        context(@"without offsets", ^{
+            
+            context(@"horizontally centered", ^{
+                
+                it(@"vertically centered", ^{
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenter)) should] equal:theValue(CGRectMake(145, 145, 10, 10))];
+                });
+                
+                it(@"above", ^{
+
+                });
+                
+                it(@"top on", ^{
+                    
+                });
+                
+                it(@"top inside", ^{
+                    
+                });
+                
+                it(@"below", ^{
+
+                });
+                
+                it(@"bottom on", ^{
+                    
+                });
+
+                it(@"bottom outside", ^{
+                    
+                });
+                
+            });
+            
+            context(@"to the left of", ^{
+                
+                it(@"vertically centered", ^{
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenter)) should] equal:theValue(CGRectMake(145, 145, 10, 10))];
+                });
+                
+                it(@"above", ^{
+                    
+                });
+                
+                it(@"top on", ^{
+                    
+                });
+                
+                it(@"top inside", ^{
+                    
+                });
+                
+                it(@"below", ^{
+                    
+                });
+                
+                it(@"bottom on", ^{
+                    
+                });
+                
+                it(@"bottom outside", ^{
+                    
+                });
+                
+            });
+            
+            context(@"to the right of", ^{
+                
+                it(@"vertically centered", ^{
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenter)) should] equal:theValue(CGRectMake(145, 145, 10, 10))];
+                });
+                
+                it(@"above", ^{
+                    
+                });
+                
+                it(@"top on", ^{
+                    
+                });
+                
+                it(@"top inside", ^{
+                    
+                });
+                
+                it(@"below", ^{
+                    
+                });
+                
+                it(@"bottom on", ^{
+                    
+                });
+                
+                it(@"bottom outside", ^{
+                    
+                });
+            });
+            
+        });
+        
+        context(@"with offsets", ^{
+            
+        });
+        
+    });
+    
     describe(@"The CGFloat functions", ^{
         
         context(@"LL_CGFloatFloor", ^{
