@@ -5,6 +5,60 @@
 SPEC_BEGIN(LLGeometryUtilitiesSpec)
 
 describe(@"the geometry utilities", ^{
+
+    describe(@"obtaining alignment", ^{
+        
+        const CGPoint point = CGPointMake(100, 100);
+        
+        context(@"horizontally aligned", ^{
+            
+            it(@"vertically aligned", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 100))) should] equal:theValue(LLAlignmentCenter)];
+            });
+            
+            it(@"above", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 200))) should] equal:theValue(LLAlignmentAboveCenterHorizontal)];
+            });
+            
+            it(@"below", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 50))) should] equal:theValue(LLAlignmentBelowCenterHorizontal)];
+            });
+            
+        });
+        
+        context(@"to the left of", ^{
+            
+            it(@"vertically aligned", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 100))) should] equal:theValue(LLAlignmentCenterVerticalToLeftOf)];
+            });
+            
+            it(@"above", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 200))) should] equal:theValue(LLAlignmentAboveToLeftOf)];
+            });
+            
+            it(@"below", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 50))) should] equal:theValue(LLAlignmentBelowToLeftOf)];
+            });
+            
+        });
+        
+        context(@"to the right of", ^{
+        
+            it(@"vertically aligned", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 100))) should] equal:theValue(LLAlignmentCenterVerticalToRightOf)];
+            });
+            
+            it(@"above", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 200))) should] equal:theValue(LLAlignmentAboveToRightOf)];
+            });
+            
+            it(@"below", ^{
+                [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 50))) should] equal:theValue(LLAlignmentBelowToRightOf)];
+            });
+            
+        });
+        
+    });
     
     describe(@"Obtaining positions functions", ^{
        

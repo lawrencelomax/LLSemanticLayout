@@ -394,6 +394,32 @@ extern inline UIEdgeInsets LL_UIEdgeInsetsMax(UIEdgeInsets first, UIEdgeInsets s
     return result;
 }
 
+#pragma mark LLAlignment
+
+extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint)
+{
+    const CGPoint delta = LL_CGPointSubtract(comparisonPoint, point);
+    LLAlignment alignment = LLAlignmentNone;
+    
+    //Horizontal
+    if(delta.x == 0)
+        alignment |= LLAlignmentCenterHorizontal;
+    else if (delta.x > 0)
+        alignment |= LLAlignmentToRightOf;
+    else if(delta.x < 0)
+        alignment |= LLAlignmentToLeftOf;
+    
+    //Vertical
+    if(delta.y == 0)
+        alignment |= LLAlignmentCenterVertical;
+    else if (delta.y > 0)
+        alignment |= LLAlignmentAbove;
+    else if(delta.y < 0)
+        alignment |= LLAlignmentBelow;
+    
+    return alignment;
+}
+
 #pragma mark CGAffineTransform
 
 extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transform)

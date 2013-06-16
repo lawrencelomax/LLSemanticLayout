@@ -87,6 +87,9 @@
 #define LLDegreesToRadians(x) (M_PI * x / 180.0)
 
 typedef NS_OPTIONS(NSUInteger, LLAlignment){
+    // Null/Empty
+    LLAlignmentNone = 0,
+    
     // Vertical Aligment
     LLAlignmentTopInside = 1 << 1,
     LLAlignmentTopOutside = 1 << 2,
@@ -114,19 +117,28 @@ typedef NS_OPTIONS(NSUInteger, LLAlignment){
     
     LLAlignmentCenterHorizontal = 1 << 14,
     LLAligmentHorizontal = (LLAlignmentLeftInside | LLAlignmentLeftOutside | LLAlignmentLeftOn | LLAlignmentRightInside | LLAlignmentRightOutside | LLAlignmentRightOn | LLAlignmentCenterHorizontal),
-        
-    // Composites
-    LLAlignmentCenter = LLAlignmentCenterHorizontal | LLAlignmentCenterVertical,
-    LLAlignmentTopLeft = LLAlignmentTop | LLAlignmentLeft,
-    LLAlignmentTopRight = LLAlignmentTop | LLAlignmentRight,
-    LLAlignmentBottomLeft = LLAlignmentBottom | LLAlignmentLeft,
-    LLAlignmentBottomRight = LLAlignmentBottom | LLAlignmentRight,
     
     // Aliases
     LLAlignmentAbove = LLAlignmentTopOutside,
     LLAlignmentBelow = LLAlignmentBottomOutside,
     LLAlignmentToLeftOf = LLAlignmentLeftOutside,
     LLAlignmentToRightOf = LLAlignmentRightOutside,
+    
+    // Composites
+    LLAlignmentTopLeft = LLAlignmentTop | LLAlignmentLeft,
+    LLAlignmentTopRight = LLAlignmentTop | LLAlignmentRight,
+    LLAlignmentBottomLeft = LLAlignmentBottom | LLAlignmentLeft,
+    LLAlignmentBottomRight = LLAlignmentBottom | LLAlignmentRight,
+    
+    LLAlignmentCenter = LLAlignmentCenterHorizontal | LLAlignmentCenterVertical,
+    LLAlignmentCenterVerticalToLeftOf = LLAlignmentCenter | LLAlignmentToLeftOf,
+    LLAlignmentCenterVerticalToRightOf = LLAlignmentCenter | LLAlignmentToRightOf,
+    LLAlignmentAboveCenterHorizontal = LLAlignmentAbove | LLAlignmentCenterHorizontal,
+    LLAlignmentAboveToLeftOf = LLAlignmentAbove | LLAlignmentToLeftOf,
+    LLAlignmentAboveToRightOf = LLAlignmentAbove | LLAlignmentToRightOf,
+    LLAlignmentBelowCenterHorizontal = LLAlignmentBelow | LLAlignmentCenterHorizontal,
+    LLAlignmentBelowToLeftOf = LLAlignmentBelow | LLAlignmentToLeftOf,
+    LLAlignmentBelowToRightOf = LLAlignmentBelow | LLAlignmentToRightOf
 };
 
 #pragma mark CGFloat
@@ -195,6 +207,10 @@ extern inline UIEdgeInsets LL_UIEdgeInsetsSubtract(UIEdgeInsets first, UIEdgeIns
 
 extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets first, UIEdgeInsets second);
 extern inline UIEdgeInsets LL_UIEdgeInsetsMax(UIEdgeInsets first, UIEdgeInsets second);
+
+#pragma mark LLAlignment
+
+extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint);
 
 #pragma mark CGAffineTransform
 
