@@ -436,9 +436,9 @@ extern inline LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint poi
     if(point.y == CGRectGetMidY(rect))
         alignment |= LLAlignmentCenterVertical;
     else if(point.y < CGRectGetMinY(rect))
-        alignment |= LLAlignmentAbove;
-    else if(point.y > CGRectGetMaxY(rect))
         alignment |= LLAlignmentBelow;
+    else if(point.y > CGRectGetMaxY(rect))
+        alignment |= LLAlignmentAbove;
     else
         alignment |= LLAlignmentVerticalInside;
     

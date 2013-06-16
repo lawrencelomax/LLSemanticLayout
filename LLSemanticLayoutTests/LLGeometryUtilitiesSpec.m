@@ -51,7 +51,7 @@ describe(@"the geometry utilities", ^{
                 });
                 
                 it(@"above", ^{
-                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(250, 250))) should] equal:theValue(LLAlignmentAboveToLeftOf)];
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(250, 250))) should] equal:theValue(LLAlignmentAboveToRightOf)];
                 });
                 
                 it(@"below", ^{
