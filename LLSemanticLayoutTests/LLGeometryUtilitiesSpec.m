@@ -100,27 +100,27 @@ describe(@"the geometry utilities", ^{
                 });
                 
                 it(@"above", ^{
-
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentAboveCenterHorizontal)) should] equal:theValue(CGRectMake(145, 90, 10, 10))];
                 });
                 
                 it(@"top on", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentTopOnCenterHorizontal)) should] equal:theValue(CGRectMake(145, 95, 10, 10))];
                 });
                 
                 it(@"top inside", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentTopInsideCenterHorizontal)) should] equal:theValue(CGRectMake(145, 100, 10, 10))];
                 });
                 
                 it(@"below", ^{
-
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBelowCenterHorizontal)) should] equal:theValue(CGRectMake(145, 200, 10, 10))];
                 });
                 
                 it(@"bottom on", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBottomOnCenterHorizontal)) should] equal:theValue(CGRectMake(145, 95, 10, 10))];
                 });
 
-                it(@"bottom outside", ^{
-                    
+                it(@"bottom inside", ^{
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBottomInsideCenterHorizontal)) should] equal:theValue(CGRectMake(145, 190, 10, 10))];
                 });
                 
             });
@@ -128,31 +128,31 @@ describe(@"the geometry utilities", ^{
             context(@"to the left of", ^{
                 
                 it(@"vertically centered", ^{
-                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenter)) should] equal:theValue(CGRectMake(145, 145, 10, 10))];
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenterVerticalToLeftOf)) should] equal:theValue(CGRectMake(90, 145, 10, 10))];
                 });
                 
                 it(@"above", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentAboveCenterHorizontal)) should] equal:theValue(CGRectMake(145, 90, 10, 10))];
                 });
                 
                 it(@"top on", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentTopOnCenterHorizontal)) should] equal:theValue(CGRectMake(145, 95, 10, 10))];
                 });
                 
                 it(@"top inside", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentTopInsideCenterHorizontal)) should] equal:theValue(CGRectMake(145, 100, 10, 10))];
                 });
                 
                 it(@"below", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBelowCenterHorizontal)) should] equal:theValue(CGRectMake(145, 200, 10, 10))];
                 });
                 
                 it(@"bottom on", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBottomOnCenterHorizontal)) should] equal:theValue(CGRectMake(145, 95, 10, 10))];
                 });
                 
-                it(@"bottom outside", ^{
-                    
+                it(@"bottom inside", ^{
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBottomInsideCenterHorizontal)) should] equal:theValue(CGRectMake(145, 190, 10, 10))];
                 });
                 
             });
@@ -160,32 +160,33 @@ describe(@"the geometry utilities", ^{
             context(@"to the right of", ^{
                 
                 it(@"vertically centered", ^{
-                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenter)) should] equal:theValue(CGRectMake(145, 145, 10, 10))];
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentCenterVerticalToRightOf)) should] equal:theValue(CGRectMake(200, 145, 10, 10))];
                 });
                 
                 it(@"above", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentAboveToRightOf)) should] equal:theValue(CGRectMake(200, 90, 10, 10))];
                 });
                 
                 it(@"top on", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentTopOnToRightOf)) should] equal:theValue(CGRectMake(200, 95, 10, 10))];
                 });
                 
                 it(@"top inside", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentTopInsideToRightOf)) should] equal:theValue(CGRectMake(200, 100, 10, 10))];
                 });
                 
                 it(@"below", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBelowToRightOf)) should] equal:theValue(CGRectMake(200, 200, 10, 10))];
                 });
                 
                 it(@"bottom on", ^{
-                    
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBottomOnToRightOf)) should] equal:theValue(CGRectMake(200, 95, 10, 10))];
                 });
                 
-                it(@"bottom outside", ^{
-                    
+                it(@"bottom inside", ^{
+                    [[theValue(LL_CGRectAlign(alignRect, placementRect, LLAlignmentBottomInsideToRightOf)) should] equal:theValue(CGRectMake(200, 190, 10, 10))];
                 });
+                
             });
             
         });

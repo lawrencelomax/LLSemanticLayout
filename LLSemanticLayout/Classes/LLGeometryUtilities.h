@@ -133,12 +133,26 @@ typedef NS_OPTIONS(NSUInteger, LLAlignment){
     LLAlignmentCenter = LLAlignmentCenterHorizontal | LLAlignmentCenterVertical,
     LLAlignmentCenterVerticalToLeftOf = LLAlignmentCenterVertical | LLAlignmentToLeftOf,
     LLAlignmentCenterVerticalToRightOf = LLAlignmentCenterVertical | LLAlignmentToRightOf,
+
     LLAlignmentAboveCenterHorizontal = LLAlignmentAbove | LLAlignmentCenterHorizontal,
     LLAlignmentAboveToLeftOf = LLAlignmentAbove | LLAlignmentToLeftOf,
     LLAlignmentAboveToRightOf = LLAlignmentAbove | LLAlignmentToRightOf,
+    LLAlignmentTopOnCenterHorizontal = LLAlignmentTopOn | LLAlignmentCenterHorizontal,
+    LLAlignmentTopOnToLeftOf = LLAlignmentTopOn | LLAlignmentToLeftOf,
+    LLAlignmentTopOnToRightOf = LLAlignmentTopOn | LLAlignmentToRightOf,
+    LLAlignmentTopInsideCenterHorizontal = LLAlignmentTopInside | LLAlignmentCenterHorizontal,
+    LLAlignmentTopInsideToLeftOf = LLAlignmentTopInside | LLAlignmentToLeftOf,
+    LLAlignmentTopInsideToRightOf = LLAlignmentTopInside | LLAlignmentToRightOf,
+    
     LLAlignmentBelowCenterHorizontal = LLAlignmentBelow | LLAlignmentCenterHorizontal,
     LLAlignmentBelowToLeftOf = LLAlignmentBelow | LLAlignmentToLeftOf,
-    LLAlignmentBelowToRightOf = LLAlignmentBelow | LLAlignmentToRightOf
+    LLAlignmentBelowToRightOf = LLAlignmentBelow | LLAlignmentToRightOf,
+    LLAlignmentBottomOnCenterHorizontal = LLAlignmentBottomOn | LLAlignmentCenterHorizontal,
+    LLAlignmentBottomOnToLeftOf = LLAlignmentBottomOn | LLAlignmentToLeftOf,
+    LLAlignmentBottomOnToRightOf = LLAlignmentBottomOn | LLAlignmentToRightOf,
+    LLAlignmentBottomInsideCenterHorizontal = LLAlignmentBottomInside | LLAlignmentCenterHorizontal,
+    LLAlignmentBottomInsideToLeftOf = LLAlignmentBottomInside | LLAlignmentToLeftOf,
+    LLAlignmentBottomInsideToRightOf = LLAlignmentBottomInside | LLAlignmentToRightOf
 };
 
 #pragma mark CGFloat
