@@ -131,8 +131,8 @@ typedef NS_OPTIONS(NSUInteger, LLAlignment){
     LLAlignmentBottomRight = LLAlignmentBottom | LLAlignmentRight,
     
     LLAlignmentCenter = LLAlignmentCenterHorizontal | LLAlignmentCenterVertical,
-    LLAlignmentCenterVerticalToLeftOf = LLAlignmentCenter | LLAlignmentToLeftOf,
-    LLAlignmentCenterVerticalToRightOf = LLAlignmentCenter | LLAlignmentToRightOf,
+    LLAlignmentCenterVerticalToLeftOf = LLAlignmentCenterVertical | LLAlignmentToLeftOf,
+    LLAlignmentCenterVerticalToRightOf = LLAlignmentCenterVertical | LLAlignmentToRightOf,
     LLAlignmentAboveCenterHorizontal = LLAlignmentAbove | LLAlignmentCenterHorizontal,
     LLAlignmentAboveToLeftOf = LLAlignmentAbove | LLAlignmentToLeftOf,
     LLAlignmentAboveToRightOf = LLAlignmentAbove | LLAlignmentToRightOf,
