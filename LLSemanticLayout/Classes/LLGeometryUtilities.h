@@ -91,32 +91,44 @@ typedef NS_OPTIONS(NSUInteger, LLAlignment){
     LLAlignmentNone = 0,
     
     // Vertical Aligment
-    LLAlignmentTopInside = 1 << 1,
-    LLAlignmentTopOutside = 1 << 2,
-    LLAlignmentTopOn = 1 << 3,
-    LLAlignmentTop = (LLAlignmentTopInside | LLAlignmentTopOutside | LLAlignmentTopOn),
+    LLAlignmentVerticalInside = 1 << 1,
+    LLAlignmentVerticalOutside = 1 << 2,
+    LLAlignmentVerticalOn = 1 << 3,
+    LLAlignmentTop = 1 << 4,
+    LLAlignmentBottom = 1 << 5,
+    LLAlignmentCenterVertical = 1 << 6,
     
-    LLAlignmentBottomInside = 1 << 4,
-    LLAlignmentBottomOutside = 1 << 5,
-    LLAlignmentBottomOn = 1 << 6,
-    LLAlignmentBottom = (LLAlignmentBottomInside | LLAlignmentBottomOutside | LLAlignmentBottomOn),
+    LLAlignmentTopInside = LLAlignmentTop | LLAlignmentVerticalInside,
+    LLAlignmentTopOutside = LLAlignmentTop | LLAlignmentVerticalOutside,
+    LLAlignmentTopOn = LLAlignmentTop | LLAlignmentVerticalOn,
+    LLAlignmentTopAll = (LLAlignmentTopInside | LLAlignmentTopOutside | LLAlignmentTopOn),
     
-    LLAlignmentCenterVertical = 1 << 7,
-    LLAlignmentVertical = (LLAlignmentTopInside | LLAlignmentTopOutside | LLAlignmentTopOn | LLAlignmentBottomInside | LLAlignmentBottomOutside | LLAlignmentBottomOn | LLAlignmentCenterVertical),
+    LLAlignmentBottomInside = LLAlignmentBottom | LLAlignmentVerticalInside,
+    LLAlignmentBottomOutside = LLAlignmentBottom | LLAlignmentVerticalOutside,
+    LLAlignmentBottomOn = LLAlignmentBottom | LLAlignmentVerticalOn,
+    LLAlignmentBottomAll = (LLAlignmentBottomInside | LLAlignmentBottomOutside | LLAlignmentBottomOn),
+    
+    LLAlignmentVerticalAll = (LLAlignmentTopAll | LLAlignmentBottomAll | LLAlignmentCenterVertical),
     
     // Horizontal Aligment
-    LLAlignmentLeftInside = 1 << 8,
-    LLAlignmentLeftOutside = 1 << 9,
-    LLAlignmentLeftOn = 1 << 10,
-    LLAlignmentLeft = (LLAlignmentLeftInside | LLAlignmentLeftOutside | LLAlignmentLeftOn),
+    LLAlignmentHorizontalInside = 1 << 7,
+    LLAlignmentHorizontalOutside = 1 << 8,
+    LLAlignmentHorizontalOn = 1 << 9,
+    LLAlignmentLeft = 1 << 10,
+    LLAlignmentRight = 1 << 11,
+    LLAlignmentCenterHorizontal = 1 << 12,
     
-    LLAlignmentRightInside = 1 << 11,
-    LLAlignmentRightOutside = 1 << 12,
-    LLAlignmentRightOn = 1 << 13,
-    LLAlignmentRight = (LLAlignmentRightInside | LLAlignmentRightOutside | LLAlignmentRightOn),
+    LLAlignmentLeftInside = LLAlignmentLeft | LLAlignmentHorizontalInside,
+    LLAlignmentLeftOutside = LLAlignmentLeft | LLAlignmentHorizontalOutside,
+    LLAlignmentLeftOn = LLAlignmentLeft | LLAlignmentHorizontalOn,
+    LLAlignmentLeftAll = (LLAlignmentLeftInside | LLAlignmentLeftOutside | LLAlignmentLeftOn),
     
-    LLAlignmentCenterHorizontal = 1 << 14,
-    LLAligmentHorizontal = (LLAlignmentLeftInside | LLAlignmentLeftOutside | LLAlignmentLeftOn | LLAlignmentRightInside | LLAlignmentRightOutside | LLAlignmentRightOn | LLAlignmentCenterHorizontal),
+    LLAlignmentRightInside = LLAlignmentRight | LLAlignmentHorizontalInside,
+    LLAlignmentRightOutside = LLAlignmentRight | LLAlignmentHorizontalOutside,
+    LLAlignmentRightOn = LLAlignmentRight | LLAlignmentHorizontalOn,
+    LLAlignmentRightAll = (LLAlignmentRightInside | LLAlignmentRightOutside | LLAlignmentRightOn),
+    
+    LLAligmentHorizontalAll = (LLAlignmentLeftAll | LLAlignmentRightAll | LLAlignmentCenterHorizontal),
     
     // Aliases
     LLAlignmentAbove = LLAlignmentTopOutside,
@@ -225,6 +237,7 @@ extern inline UIEdgeInsets LL_UIEdgeInsetsMax(UIEdgeInsets first, UIEdgeInsets s
 #pragma mark LLAlignment
 
 extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint);
+extern inline LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint point);
 
 #pragma mark CGAffineTransform
 

@@ -8,55 +8,114 @@ describe(@"the geometry utilities", ^{
 
     describe(@"obtaining alignment", ^{
         
-        const CGPoint point = CGPointMake(100, 100);
-        
-        context(@"horizontally aligned", ^{
+        context(@"point to rectangle", ^{
             
-            it(@"vertically aligned", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 100))) should] equal:theValue(LLAlignmentCenter)];
+            const CGRect rect = CGRectMake(100, 100, 100, 100);
+            
+            context(@"horizontally inside", ^{
+                
+                it(@"vertically inside", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(150, 150))) should] equal:theValue(LLAlignmentCenter)];
+                });
+                
+                it(@"above", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(150, 250))) should] equal:theValue(LLAlignmentAboveCenterHorizontal)];
+                });
+                
+                it(@"below", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(150, 50))) should] equal:theValue(LLAlignmentBelowCenterHorizontal)];
+                });
+                
             });
             
-            it(@"above", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 200))) should] equal:theValue(LLAlignmentAboveCenterHorizontal)];
+            context(@"to left of", ^{
+                
+                it(@"vertically inside", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(50, 150))) should] equal:theValue(LLAlignmentCenterVerticalToLeftOf)];
+                });
+                
+                it(@"above", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(50, 250))) should] equal:theValue(LLAlignmentAboveToLeftOf)];
+                });
+                
+                it(@"below", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(50, 50))) should] equal:theValue(LLAlignmentBelowToLeftOf)];
+                });
+                
             });
             
-            it(@"below", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 50))) should] equal:theValue(LLAlignmentBelowCenterHorizontal)];
+            context(@"to right of", ^{
+
+                it(@"vertically inside", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(250, 150))) should] equal:theValue(LLAlignmentCenterVerticalToRightOf)];
+                });
+                
+                it(@"above", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(250, 250))) should] equal:theValue(LLAlignmentAboveToLeftOf)];
+                });
+                
+                it(@"below", ^{
+                    [[theValue(LLAlignmentComparePointToRect(rect, CGPointMake(250, 50))) should] equal:theValue(LLAlignmentBelowToRightOf)];
+                });
+                
             });
+            
             
         });
         
-        context(@"to the left of", ^{
+        context(@"point to point", ^{
             
-            it(@"vertically aligned", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 100))) should] equal:theValue(LLAlignmentCenterVerticalToLeftOf)];
+            const CGPoint point = CGPointMake(100, 100);
+            
+            context(@"horizontally aligned", ^{
+                
+                it(@"vertically aligned", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 100))) should] equal:theValue(LLAlignmentCenter)];
+                });
+                
+                it(@"above", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 200))) should] equal:theValue(LLAlignmentAboveCenterHorizontal)];
+                });
+                
+                it(@"below", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(100, 50))) should] equal:theValue(LLAlignmentBelowCenterHorizontal)];
+                });
+                
             });
             
-            it(@"above", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 200))) should] equal:theValue(LLAlignmentAboveToLeftOf)];
+            context(@"to the left of", ^{
+                
+                it(@"vertically aligned", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 100))) should] equal:theValue(LLAlignmentCenterVerticalToLeftOf)];
+                });
+                
+                it(@"above", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 200))) should] equal:theValue(LLAlignmentAboveToLeftOf)];
+                });
+                
+                it(@"below", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 50))) should] equal:theValue(LLAlignmentBelowToLeftOf)];
+                });
+                
             });
             
-            it(@"below", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(50, 50))) should] equal:theValue(LLAlignmentBelowToLeftOf)];
+            context(@"to the right of", ^{
+                
+                it(@"vertically aligned", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 100))) should] equal:theValue(LLAlignmentCenterVerticalToRightOf)];
+                });
+                
+                it(@"above", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 200))) should] equal:theValue(LLAlignmentAboveToRightOf)];
+                });
+                
+                it(@"below", ^{
+                    [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 50))) should] equal:theValue(LLAlignmentBelowToRightOf)];
+                });
+                
             });
-            
         });
         
-        context(@"to the right of", ^{
-        
-            it(@"vertically aligned", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 100))) should] equal:theValue(LLAlignmentCenterVerticalToRightOf)];
-            });
-            
-            it(@"above", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 200))) should] equal:theValue(LLAlignmentAboveToRightOf)];
-            });
-            
-            it(@"below", ^{
-                [[theValue(LLAlignmentFromPoint(point, CGPointMake(200, 50))) should] equal:theValue(LLAlignmentBelowToRightOf)];
-            });
-            
-        });
         
     });
     

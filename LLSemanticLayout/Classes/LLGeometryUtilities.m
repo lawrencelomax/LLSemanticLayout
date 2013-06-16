@@ -103,7 +103,7 @@ extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment alignment)
 {
     CGPoint point = CGPointZero;
     
-    LLAlignment horizontalAlignment = alignment & LLAligmentHorizontal;
+    LLAlignment horizontalAlignment = alignment & LLAligmentHorizontalAll;
     switch (horizontalAlignment) {
         case LLAlignmentLeft:
         case LLAlignmentLeftInside:
@@ -125,7 +125,7 @@ extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment alignment)
             
     }
     
-    LLAlignment verticalAlignment = alignment & LLAlignmentVertical;
+    LLAlignment verticalAlignment = alignment & LLAlignmentVerticalAll;
     switch (verticalAlignment) {
         case LLAlignmentTop:
         case LLAlignmentTopInside:
@@ -151,7 +151,7 @@ extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment alignment)
 
 extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset)
 {
-    LLAlignment horizontalAlignment = alignment & LLAligmentHorizontal;
+    LLAlignment horizontalAlignment = alignment & LLAligmentHorizontalAll;
     switch (horizontalAlignment) {
         case LLAlignmentLeftInside:
             rect.origin.x = CGRectGetMinX(alignRect) + offset.x;
@@ -179,7 +179,7 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
             
     }
     
-    LLAlignment verticalAlignment = alignment & LLAlignmentVertical;
+    LLAlignment verticalAlignment = alignment & LLAlignmentVerticalAll;
     switch (verticalAlignment) {
         case LLAlignmentTopInside:
             rect.origin.y = CGRectGetMinY(alignRect) + offset.y;
@@ -416,6 +416,32 @@ extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparison
         alignment |= LLAlignmentAbove;
     else if(delta.y < 0)
         alignment |= LLAlignmentBelow;
+    
+    return alignment;
+}
+
+extern inline LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint point)
+{
+    LLAlignment alignment = LLAlignmentNone;
+    
+    if(point.x == CGRectGetMidX(rect))
+        alignment |= LLAlignmentCenterHorizontal;
+    else if(point.x < CGRectGetMinX(rect))
+        alignment |= LLAlignmentToLeftOf;
+    else if(point.x > CGRectGetMaxX(rect))
+        alignment |= LLAlignmentToRightOf;
+    else
+        alignment |= LLAlignmentHorizontalInside;
+    
+    if(point.y == CGRectGetMidY(rect))
+        alignment |= LLAlignmentCenterVertical;
+    else if(point.y < CGRectGetMinY(rect))
+        alignment |= LLAlignmentAbove;
+    else if(point.y > CGRectGetMaxY(rect))
+        alignment |= LLAlignmentBelow;
+    else
+        alignment |= LLAlignmentVerticalInside;
+    
     
     return alignment;
 }
