@@ -120,28 +120,66 @@ describe(@"the geometry utilities", ^{
     });
     
     describe(@"Obtaining positions functions", ^{
-       
+        
         const CGRect rectangle = CGRectMake(100, 100, 100, 100);
-        
-        it(@"should obtain the top left", ^{
-            [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentTopLeft)) should] equal:theValue(CGPointMake(100, 200))];
-        });
-        
-        it(@"should obtain the top right", ^{
-            [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentTopRight)) should] equal:theValue(CGPointMake(200, 200))];
-        });
 
-        it(@"should obtain the bottom left", ^{
-            [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentBottomLeft)) should] equal:theValue(CGPointMake(100, 100))];
-        });
-
-        it(@"should obtain the bottom right", ^{
-            [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentBottomRight)) should] equal:theValue(CGPointMake(200, 100))];
+        context(@"obtaining values", ^{
+           
+            it(@"should obtain the left", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentLeftAll)) should] equal:theValue(100)];
+            });
+            
+            it(@"should obtain the horizontal center", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentCenterHorizontal)) should] equal:theValue(150)];
+            });
+            
+            it(@"should obtain the right", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentRightAll)) should] equal:theValue(200)];
+            });
+            
+            it(@"should obtain the top", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentTopAll)) should] equal:theValue(200)];
+            });
+            
+            it(@"should obtain the vertical center", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentCenterVertical)) should] equal:theValue(150)];
+            });
+            
+            it(@"should obtain the bottom", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentLeftAll)) should] equal:theValue(100)];
+            });
+            
+            it(@"should return nan for invalid enum", ^{
+                [[theValue(LL_CGRectGetValue(rectangle, LLAlignmentNone)) should] equal:theValue(NAN)];
+            });
+            
         });
         
-        it(@"should obtain the center", ^{
-            [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentCenter)) should] equal:theValue(CGPointMake(150, 150))];
+        context(@"obtaining points", ^{
+            
+            it(@"should obtain the top left", ^{
+                [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentTopLeft)) should] equal:theValue(CGPointMake(100, 200))];
+            });
+            
+            it(@"should obtain the top right", ^{
+                [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentTopRight)) should] equal:theValue(CGPointMake(200, 200))];
+            });
+            
+            it(@"should obtain the bottom left", ^{
+                [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentBottomLeft)) should] equal:theValue(CGPointMake(100, 100))];
+            });
+            
+            it(@"should obtain the bottom right", ^{
+                [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentBottomRight)) should] equal:theValue(CGPointMake(200, 100))];
+            });
+            
+            it(@"should obtain the center", ^{
+                [[theValue(LL_CGRectGetPoint(rectangle, LLAlignmentCenter)) should] equal:theValue(CGPointMake(150, 150))];
+            });
+
+            
         });
+       
         
     });
     
@@ -255,7 +293,7 @@ describe(@"the geometry utilities", ^{
         });
         
     });
-    
+        
     describe(@"The CGFloat functions", ^{
         
         context(@"LL_CGFloatFloor", ^{

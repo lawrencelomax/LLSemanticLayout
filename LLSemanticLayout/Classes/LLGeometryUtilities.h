@@ -33,6 +33,7 @@
 #define CGRectPlaceSizeWithOffset LL_CGRectPlaceSizeWithOffset
 #define CGRectPlaceSize LL_CGRectPlaceSize
 
+#define CGRectGetValue LL_CGRectGetValue
 #define CGRectGetPoint LL_CGRectGetPoint
 
 // CGSize
@@ -128,7 +129,7 @@ typedef NS_OPTIONS(NSUInteger, LLAlignment){
     LLAlignmentRightOn = LLAlignmentRight | LLAlignmentHorizontalOn,
     LLAlignmentRightAll = (LLAlignmentRightInside | LLAlignmentRightOutside | LLAlignmentRightOn),
     
-    LLAligmentHorizontalAll = (LLAlignmentLeftAll | LLAlignmentRightAll | LLAlignmentCenterHorizontal),
+    LLAlignmentHorizontalAll = (LLAlignmentLeftAll | LLAlignmentRightAll | LLAlignmentCenterHorizontal),
     
     // Aliases
     LLAlignmentAbove = LLAlignmentTopOutside,
@@ -188,8 +189,8 @@ extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlign
 extern inline CGRect LL_CGRectPlaceSizeWithOffset(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset);
 extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLAlignment alignment);
 
+extern inline CGFloat LL_CGRectGetValue(CGRect rect, LLAlignment position);
 extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
-
 
 #pragma mark CGSize
 

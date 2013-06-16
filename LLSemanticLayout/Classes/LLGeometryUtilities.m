@@ -99,59 +99,73 @@ extern inline CGRect LL_CGRectInset(CGRect rect, UIEdgeInsets edgeInsets)
     return newRect;
 }
 
-extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment alignment)
+extern inline CGFloat LL_CGRectGetValue(CGRect rect, LLAlignment alignment)
 {
-    CGPoint point = CGPointZero;
-    
-    LLAlignment horizontalAlignment = alignment & LLAligmentHorizontalAll;
-    switch (horizontalAlignment) {
-        case LLAlignmentLeft:
-        case LLAlignmentLeftInside:
-        case LLAlignmentLeftOutside:
-        case LLAlignmentLeftOn:
-            point.x = CGRectGetMinX(rect);
-            break;
-        case LLAlignmentRight:
-        case LLAlignmentRightInside:
-        case LLAlignmentRightOutside:
-        case LLAlignmentRightOn:
-            point.x = CGRectGetMaxX(rect);
-            break;
-        case LLAlignmentCenterHorizontal:
-            point.x = CGRectGetMidX(rect);
-            break;
-        default:
-            break;
-            
+    LLAlignment horizontalAlignment = alignment & LLAlignmentHorizontalAll;
+    if(horizontalAlignment != LLAlignmentNone)
+    {
+        switch (horizontalAlignment)
+        {
+            case LLAlignmentLeft:
+            case LLAlignmentLeftInside:
+            case LLAlignmentLeftOutside:
+            case LLAlignmentLeftOn:
+            case LLAlignmentLeftAll:
+                return CGRectGetMinX(rect);
+            case LLAlignmentRight:
+            case LLAlignmentRightInside:
+            case LLAlignmentRightOutside:
+            case LLAlignmentRightOn:
+            case LLAlignmentRightAll:
+                return CGRectGetMaxX(rect);
+            case LLAlignmentCenterHorizontal:
+                return CGRectGetMidX(rect);
+            default:
+                break;                
+        }
     }
     
     LLAlignment verticalAlignment = alignment & LLAlignmentVerticalAll;
-    switch (verticalAlignment) {
-        case LLAlignmentTop:
-        case LLAlignmentTopInside:
-        case LLAlignmentTopOutside:
-        case LLAlignmentTopOn:
-            point.y = CGRectGetMaxY(rect);
-            break;
-        case LLAlignmentBottom:
-        case LLAlignmentBottomInside:
-        case LLAlignmentBottomOutside:
-        case LLAlignmentBottomOn:
-            point.y = CGRectGetMinY(rect);
-            break;
-        case LLAlignmentCenterVertical:
-            point.y = CGRectGetMidY(rect);
-            break;
-        default:
-            break;
+    if(verticalAlignment != LLAlignmentNone)
+    {
+        switch (verticalAlignment)
+        {
+            case LLAlignmentTop:
+            case LLAlignmentTopInside:
+            case LLAlignmentTopOutside:
+            case LLAlignmentTopOn:
+            case LLAlignmentTopAll:
+                return CGRectGetMaxY(rect);
+                break;
+            case LLAlignmentBottom:
+            case LLAlignmentBottomInside:
+            case LLAlignmentBottomOutside:
+            case LLAlignmentBottomOn:
+            case LLAlignmentBottomAll:
+                return CGRectGetMinY(rect);
+                break;
+            case LLAlignmentCenterVertical:
+                return CGRectGetMidY(rect);
+                break;
+            default:
+                break;
+        }
     }
     
+    return NAN;
+}
+
+extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment alignment)
+{
+    CGPoint point = CGPointZero;
+    point.x = LL_CGRectGetValue(rect, alignment & LLAlignmentHorizontalAll);
+    point.y = LL_CGRectGetValue(rect, alignment & LLAlignmentVerticalAll);
     return point;
 }
 
 extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset)
 {
-    LLAlignment horizontalAlignment = alignment & LLAligmentHorizontalAll;
+    LLAlignment horizontalAlignment = alignment & LLAlignmentHorizontalAll;
     switch (horizontalAlignment) {
         case LLAlignmentLeftInside:
             rect.origin.x = CGRectGetMinX(alignRect) + offset.x;
@@ -176,7 +190,6 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
             break;
         default:
             break;
-            
     }
     
     LLAlignment verticalAlignment = alignment & LLAlignmentVerticalAll;
