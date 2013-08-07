@@ -2,4 +2,4 @@ language: objective-c
 before_install:
     - brew update
     - brew install xctool --HEAD
-script: xctool -workspace LLSemanticLayout.xcworkspace -scheme 'LLSemanticLayout' test
+script: xctool ARCHS=i386 VALID_ARCHS=i386 CURRENT_ARCH=i386 ONLY_ACTIVE_ARCH=NO -workspace 'LLSemanticLayout.xcworkspace' -scheme 'LLSemanticLayout' -configuration Debug -sdk iphonesimulator clean build test
