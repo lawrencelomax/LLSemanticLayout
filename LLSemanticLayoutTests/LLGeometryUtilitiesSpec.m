@@ -1,6 +1,7 @@
 #import <Kiwi/Kiwi.h>
 
 #import "LLGeometryUtilities.h"
+#import "LLSemanticLayout.h"
 
 SPEC_BEGIN(LLGeometryUtilitiesSpec)
 

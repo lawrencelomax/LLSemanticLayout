@@ -12,6 +12,7 @@
 		2100543B1730EFC6006E5BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B2E8FD169BDE8600C9DE28 /* Foundation.framework */; };
 		2152FA281749ABCD002857FF /* LLGeometryUtilitiesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */; };
 		2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */; };
+		219F252018247C0B00222034 /* LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 219F251F18247C0B00222034 /* LLSemanticLayout.m */; };
 		21CB2D0E176BD21E0079094A /* LLGeometryUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */; };
 		21CB2D0F176BD2210079094A /* UIView+LLSemanticLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */; };
 		21CB2D11176BD2660079094A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CB2D10176BD2660079094A /* QuartzCore.framework */; };
@@ -39,6 +40,8 @@
 		2152FA0F1749AA85002857FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2152FA271749ABCD002857FF /* LLGeometryUtilitiesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLGeometryUtilitiesSpec.m; path = LLSemanticLayoutTests/LLGeometryUtilitiesSpec.m; sourceTree = SOURCE_ROOT; };
 		2152FA291749AD25002857FF /* UIView+LLSemanticLayoutSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLSemanticLayoutSpec.m"; sourceTree = "<group>"; };
+		219F251E18247C0B00222034 /* LLSemanticLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSemanticLayout.h; sourceTree = "<group>"; };
+		219F251F18247C0B00222034 /* LLSemanticLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSemanticLayout.m; sourceTree = "<group>"; };
 		21B2E8FD169BDE8600C9DE28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		21B2E90C169BDE8600C9DE28 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		21B2E90E169BDE8600C9DE28 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -148,6 +151,8 @@
 			children = (
 				21B2E92D169BDF1A00C9DE28 /* LLGeometryUtilities.h */,
 				21B2E92E169BDF1A00C9DE28 /* LLGeometryUtilities.m */,
+				219F251E18247C0B00222034 /* LLSemanticLayout.h */,
+				219F251F18247C0B00222034 /* LLSemanticLayout.m */,
 				21B2E930169BDFE900C9DE28 /* UIView+LLSemanticLayout.h */,
 				21B2E931169BDFE900C9DE28 /* UIView+LLSemanticLayout.m */,
 			);
@@ -312,6 +317,7 @@
 			files = (
 				2152FA281749ABCD002857FF /* LLGeometryUtilitiesSpec.m in Sources */,
 				2152FA2A1749AD25002857FF /* UIView+LLSemanticLayoutSpec.m in Sources */,
+				219F252018247C0B00222034 /* LLSemanticLayout.m in Sources */,
 				21CB2D0E176BD21E0079094A /* LLGeometryUtilities.m in Sources */,
 				21CB2D0F176BD2210079094A /* UIView+LLSemanticLayout.m in Sources */,
 			);
