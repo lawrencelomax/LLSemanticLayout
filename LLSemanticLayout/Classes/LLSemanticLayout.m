@@ -10,7 +10,7 @@
 
 #import "LLGeometryUtilities.h"
 
-extern inline CGFloat LL_CGRectGetValue(CGRect rect, LLAlignment alignment)
+extern CGFloat LL_CGFunction(GetValue)(CGRect rect, LLAlignment alignment)
 {
     LLAlignment horizontalAlignment = alignment & LLAlignmentHorizontalAll;
     if(horizontalAlignment != LLAlignmentNone)
@@ -66,15 +66,15 @@ extern inline CGFloat LL_CGRectGetValue(CGRect rect, LLAlignment alignment)
     return NAN;
 }
 
-extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment alignment)
+extern CGPoint LL_CGFunction(GetPoint)(CGRect rect, LLAlignment alignment)
 {
     CGPoint point = CGPointZero;
-    point.x = LL_CGRectGetValue(rect, alignment & LLAlignmentHorizontalAll);
-    point.y = LL_CGRectGetValue(rect, alignment & LLAlignmentVerticalAll);
+    point.x = LL_CGFunctionCall(GetValue)(rect, alignment & LLAlignmentHorizontalAll);
+    point.y = LL_CGFunctionCall(GetValue)(rect, alignment & LLAlignmentVerticalAll);
     return point;
 }
 
-extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset)
+extern CGRect LL_CGFunction(AlignWithOffset)(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset)
 {
     LLAlignment horizontalAlignment = alignment & LLAlignmentHorizontalAll;
     switch (horizontalAlignment) {
@@ -133,35 +133,35 @@ extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rec
     return rect;
 }
 
-extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlignment alignment)
+extern CGRect LL_CGFunction(Align)(const CGRect alignRect, CGRect rect, LLAlignment alignment)
 {
-    return LL_CGRectAlignWithOffset(alignRect, rect, alignment, CGPointZero);
+    return LL_CGFunctionCall(AlignWithOffset)(alignRect, rect, alignment, CGPointZero);
 }
 
-extern inline CGRect LL_CGRectPlaceSizeWithOffset(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset)
+extern CGRect LL_CGFunction(PlaceSizeWithOffset)(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset)
 {
-    return LL_CGRectAlignWithOffset(alignRect, LL_CGRectZeroOriginWithSize(size), alignment, offset);
+    return LL_CGFunctionCall(AlignWithOffset)(alignRect, LL_CGFunctionCall(ZeroOriginWithSize)(size), alignment, offset);
 }
 
-extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLAlignment alignment)
+extern CGRect LL_CGFunction(PlaceSize)(const CGRect alignRect, CGSize size, LLAlignment alignment)
 {
-    return LL_CGRectPlaceSizeWithOffset(alignRect, size, alignment, CGPointZero);
+    return LL_CGFunctionCall(PlaceSizeWithOffset)(alignRect, size, alignment, CGPointZero);
 }
 
-extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment alignment)
+extern CGSize LL_CGFunction(Combine)(CGSize s1, CGSize s2, LLAlignment alignment)
 {
-    CGRect frame1 = LL_CGRectZeroOriginWithSize(s1);
-    CGRect frame2 = LL_CGRectZeroOriginWithSize(s2);
-    frame2 = LL_CGRectAlign(frame1, frame2, alignment);
+    CGRect frame1 = LL_CGFunctionCall(ZeroOriginWithSize)(s1);
+    CGRect frame2 = LL_CGFunctionCall(ZeroOriginWithSize)(s2);
+    frame2 = LL_CGFunctionCall(Align)(frame1, frame2, alignment);
     CGSize result = CGRectUnion(frame1, frame2).size;
     return result;
 }
 
 #pragma mark LLAlignment
 
-extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint)
+extern LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint)
 {
-    const CGPoint delta = LL_CGPointSubtract(comparisonPoint, point);
+    const CGPoint delta = LL_CGFunctionCall(Subtract)(comparisonPoint, point);
     LLAlignment alignment = LLAlignmentNone;
     
     //Horizontal
@@ -183,7 +183,7 @@ extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparison
     return alignment;
 }
 
-extern inline LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint point)
+extern LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint point)
 {
     LLAlignment alignment = LLAlignmentNone;
     

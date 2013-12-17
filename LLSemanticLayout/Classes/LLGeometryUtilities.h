@@ -9,72 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-// Define LLNAMESPACE if you want non-prefixed versions of the functions. This has been done to avoid namespace collisions
-#ifdef LLNAMESPACE
+#ifndef LL_CGFunction
+#ifdef LL_CG_NAMESPACE
+#define LL_CGFunction(fun) __attribute__((overloadable)) CG##fun
+#else
+#define LL_CGFunction(fun) __attribute__((overloadable)) LL_CG##fun
+#endif
+#endif
 
-// CGFloat
-
-#define CGFloatFloor LL_CGFloatFloor
-#define CGFloatCeil LL_CGFloatCeil
-#define CGFloatRound LL_CGFloatRound
-#define CGFloatAbs LL_CGFloatAbs
-
-//CGRect
-
-#define CGRectFloor LL_CGRectFloor
-#define CGRectCeil LL_CGRectCeil
-#define CGRectRound LL_CGRectRound
-
-#define CGRectZeroOriginWithSize LL_CGRectZeroOriginWithSize
-#define CGRectInset LL_CGRectInset
-
-#define CGRectAlignWithOffset LL_CGRectAlignWithOffset
-#define CGRectAlign LL_CGRectAlign
-#define CGRectPlaceSizeWithOffset LL_CGRectPlaceSizeWithOffset
-#define CGRectPlaceSize LL_CGRectPlaceSize
-
-#define CGRectGetValue LL_CGRectGetValue
-#define CGRectGetPoint LL_CGRectGetPoint
-
-// CGSize
-
-#define CGSizeFloor LL_CGSizeFloor
-#define CGSizeCeil LL_CGSizeCeil
-#define CGSizeRound LL_CGSizeRound
-
-#define CGSizeUnion LL_CGSizeUnion
-#define CGSizeAdd LL_CGSizeAdd
-#define CGSizeInset LL_CGSizeInset
-#define CGSizeCombine LL_CGSizeCombine
-
-// CGPoint
-
-#define CGPointFloor LL_CGPointFloor
-#define CGPointFloor LL_CGPointCeil
-#define CGPointRound LL_CGPointRound
-
-#define CGPointAdd LL_CGPointAdd
-#define CGPointSubtract LL_CGPointSubtract
-
-#define CGPointModulus LL_CGPointModulus
-#define CGPointScalarMultiply LL_CGPointScalarMultiply
-#define CGPointScalarDivide LL_CGPointScalarDivide
-
-#define CGPointMagnitude LL_CGPointMagnitude
-#define CGPointClamp LL_CGPointClamp
-#define CGPointNormalize LL_CGPointNormalize
-
-//UIEdgeInsets
-
-#define UIEdgeInsetsOffset LL_UIEdgeInsetsOffsetRect
-#define UIEdgeInsetsAdd LL_UIEdgeInsetsAdd
-#define UIEdgeInsetsAbs LL_UIEdgeInsetsAbs
-#define UIEdgeInsetsCeil LL_UIEdgeInsetsCeil
-#define UIEdgeInsetsFloor LL_UIEdgeInsetsFloor
-#define UIEdgeInsetsRound LL_UIEdgeInsetsRound
-#define UIEdgeInsetsMin LL_UIEdgeInsetsMin
-#define UIEdgeInsetsMax LL_UIEdgeInsetsMax
-
+#ifndef LL_CGFunctionCall
+#ifdef LL_CG_NAMESPACE
+#define LL_CGFunctionCall(fun) CG##fun
+#else
+#define LL_CGFunctionCall(fun) LL_CG##fun
+#endif
 #endif
 
 #ifndef LLClamp
@@ -89,67 +37,67 @@
 
 #pragma mark CGFloat
 
-extern inline CGFloat LL_CGFloatFloor(CGFloat value);
-extern inline CGFloat LL_CGFloatCeil(CGFloat value);
-extern inline CGFloat LL_CGFloatRound(CGFloat value);
-extern inline CGFloat LL_CGFloatAbs(CGFloat value);
+extern CGFloat LL_CGFunction(Floor) (CGFloat value);
+extern CGFloat LL_CGFunction(Ceil) (CGFloat value);
+extern CGFloat LL_CGFunction(Round) (CGFloat value);
+extern CGFloat LL_CGFunction(Abs) (CGFloat value);
 
 #pragma mark CGRect
 
-extern inline CGRect LL_CGRectFloor(CGRect rect);
-extern inline CGRect LL_CGRectCeil(CGRect rect);
-extern inline CGRect LL_CGRectRound(CGRect rect);
+extern CGRect LL_CGFunction(Floor) (CGRect rect);
+extern CGRect LL_CGFunction(Ceil) (CGRect rect);
+extern CGRect LL_CGFunction(Round) (CGRect rect);
                                     
-extern inline CGRect LL_CGRectZeroOriginWithSize(CGSize size);
-extern inline CGRect LL_CGRectInset(CGRect rect, UIEdgeInsets edgeInsets);
+extern CGRect LL_CGFunction(ZeroOriginWithSize) (CGSize size);
+extern CGRect LL_CGFunction(Inset) (CGRect rect, UIEdgeInsets edgeInsets);
 
 #pragma mark CGSize
 
-extern inline CGRect LL_UIEdgeInsetsOffsetRect(CGRect rect, UIEdgeInsets edgeInsets);
+extern CGRect LL_CGFunction(Offset) (CGRect rect, UIEdgeInsets edgeInsets);
 
-extern inline CGSize LL_CGSizeFloor(CGSize size);
-extern inline CGSize LL_CGSizeCeil(CGSize size);
-extern inline CGSize LL_CGSizeRound(CGSize size);
+extern CGSize LL_CGFunction(Floor) (CGSize size);
+extern CGSize LL_CGFunction(Ceil) (CGSize size);
+extern CGSize LL_CGFunction(Round) (CGSize size);
 
-extern inline CGSize LL_CGSizeUnion(CGSize s1, CGSize s2);
-extern inline CGSize LL_CGSizeAdd(CGSize s1, CGSize s2);
-extern inline CGSize LL_CGSizeInset(CGSize size, CGFloat dw, CGFloat dh);
+extern CGSize LL_CGFunction(Union) (CGSize s1, CGSize s2);
+extern CGSize LL_CGFunction(Add) (CGSize s1, CGSize s2);
+extern CGSize LL_CGFunction(Inset) (CGSize size, CGFloat dw, CGFloat dh);
 
 #pragma mark CGPoint
 
-extern inline CGPoint LL_CGPointFloor(CGPoint point);
-extern inline CGPoint LL_CGPointCeil(CGPoint point);
-extern inline CGPoint LL_CGPointRound(CGPoint point);
-extern inline CGPoint LL_CGPointModulus(CGPoint point);
+extern CGPoint LL_CGFunction(Floor) (CGPoint point);
+extern CGPoint LL_CGFunction(Ceil) (CGPoint point);
+extern CGPoint LL_CGFunction(Round) (CGPoint point);
+extern CGPoint LL_CGFunction(Modulus) (CGPoint point);
 
-extern inline CGPoint LL_CGPointAdd(CGPoint p1, CGPoint p2);
-extern inline CGPoint LL_CGPointSubtract(CGPoint minuend, CGPoint subtrahend);
+extern CGPoint LL_CGFunction(Add) (CGPoint p1, CGPoint p2);
+extern CGPoint LL_CGFunction(Subtract) (CGPoint minuend, CGPoint subtrahend);
 
-extern inline CGPoint LL_CGPointScalarMultiply(CGPoint point, CGFloat scalarValue);
-extern inline CGPoint LL_CGPointScalarDivide(CGPoint point, CGFloat divisor);
+extern CGPoint LL_CGFunction(Multiply)(CGPoint point, CGFloat scalarValue);
+extern CGPoint LL_CGFunction(Divide)(CGPoint point, CGFloat divisor);
 
-extern inline CGPoint LL_CGPointMultiply(CGPoint p1, CGPoint p2);
-extern inline CGPoint LL_CGPointDivide(CGPoint point, CGPoint divisor);
+extern CGPoint LL_CGFunction(Multiply) (CGPoint p1, CGPoint p2);
+extern CGPoint LL_CGFunction(Divide) (CGPoint point, CGPoint divisor);
 
-extern inline CGFloat LL_CGPointMagnitude(CGPoint p1);
-extern inline CGPoint LL_CGPointClamp(CGPoint min, CGPoint max, CGPoint value);
-extern inline CGPoint LL_CGPointNormalize(CGPoint point);
+extern CGFloat LL_CGFunction(Magnitude) (CGPoint p1);
+extern CGPoint LL_CGFunction(Clamp) (CGPoint min, CGPoint max, CGPoint value);
+extern CGPoint LL_CGFunction(Normalize) (CGPoint point);
 
-extern inline CGFloat LL_CGPointGetAngleRadians(CGPoint point);
+extern CGFloat LL_CGFunction(GetAngleRadians) (CGPoint point);
 
 #pragma mark UIEdgeInsets
 
-extern inline UIEdgeInsets LL_UIEdgeInsetsCeil(UIEdgeInsets edgeInsets);
-extern inline UIEdgeInsets LL_UIEdgeInsetsFloor(UIEdgeInsets edgeInsets);
-extern inline UIEdgeInsets LL_UIEdgeInsetsRound(UIEdgeInsets edgeInsets);
-extern inline UIEdgeInsets LL_UIEdgeInsetsAbs(UIEdgeInsets edgeInsets);
+extern UIEdgeInsets LL_CGFunction(Ceil) (UIEdgeInsets edgeInsets);
+extern UIEdgeInsets LL_CGFunction(Floor) (UIEdgeInsets edgeInsets);
+extern UIEdgeInsets LL_CGFunction(Round) (UIEdgeInsets edgeInsets);
+extern UIEdgeInsets LL_CGFunction(Abs) (UIEdgeInsets edgeInsets);
 
-extern inline UIEdgeInsets LL_UIEdgeInsetsAdd(UIEdgeInsets first, UIEdgeInsets second);
-extern inline UIEdgeInsets LL_UIEdgeInsetsSubtract(UIEdgeInsets first, UIEdgeInsets second);
+extern UIEdgeInsets LL_CGFunction(Add) (UIEdgeInsets first, UIEdgeInsets second);
+extern UIEdgeInsets LL_CGFunction(Subtract) (UIEdgeInsets first, UIEdgeInsets second);
 
-extern inline UIEdgeInsets LL_UIEdgeInsetsMin(UIEdgeInsets first, UIEdgeInsets second);
-extern inline UIEdgeInsets LL_UIEdgeInsetsMax(UIEdgeInsets first, UIEdgeInsets second);
+extern UIEdgeInsets LL_CGFunction(Min) (UIEdgeInsets first, UIEdgeInsets second);
+extern UIEdgeInsets LL_CGFunction(Max) (UIEdgeInsets first, UIEdgeInsets second);
 
 #pragma mark CGAffineTransform
 
-extern inline CGFloat LL_CGAffineTransformGetRotation(CGAffineTransform transform);
+extern CGFloat LL_CGFunction(GetRotation) (CGAffineTransform transform);

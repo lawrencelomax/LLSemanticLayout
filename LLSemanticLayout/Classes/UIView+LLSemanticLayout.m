@@ -30,7 +30,7 @@
         return;
     
     CGRect alignRect = [view convertRect:view.bounds toView:view.superview];
-    CGRect frame = LL_CGRectAlign(alignRect, self.frame, alignment);
+    CGRect frame = LL_CGFunctionCall(Align)(alignRect, self.frame, alignment);
     self.frame = frame;
 }
 

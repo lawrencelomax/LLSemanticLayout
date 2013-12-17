@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LLGeometryUtilities.h"
+
 typedef NS_OPTIONS(NSUInteger, LLAlignment){
     // Null/Empty
     LLAlignmentNone = 0,
@@ -91,16 +93,16 @@ typedef NS_OPTIONS(NSUInteger, LLAlignment){
 
 #pragma mark LLAlignment
 
-extern inline LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint);
-extern inline LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint point);
+extern LLAlignment LLAlignmentFromPoint(CGPoint point, CGPoint comparisonPoint);
+extern LLAlignment LLAlignmentComparePointToRect(CGRect rect, CGPoint point);
 
-extern inline CGFloat LL_CGRectGetValue(CGRect rect, LLAlignment position);
-extern inline CGPoint LL_CGRectGetPoint(CGRect rect, LLAlignment position);
+extern CGFloat LL_CGFunction(GetValue) (CGRect rect, LLAlignment position);
+extern CGPoint LL_CGFunction(GetPoint) (CGRect rect, LLAlignment position);
 
-extern inline CGSize LL_CGSizeCombine(CGSize s1, CGSize s2, LLAlignment relativePosition);
+extern CGSize LL_CGFunction(Combine)(CGSize s1, CGSize s2, LLAlignment relativePosition);
 
-extern inline CGRect LL_CGRectAlignWithOffset(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset);
-extern inline CGRect LL_CGRectAlign(const CGRect alignRect, CGRect rect, LLAlignment alignment);
-extern inline CGRect LL_CGRectPlaceSizeWithOffset(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset);
-extern inline CGRect LL_CGRectPlaceSize(const CGRect alignRect, CGSize size, LLAlignment alignment);
+extern CGRect LL_CGFunction(AlignWithOffset)(const CGRect alignRect, CGRect rect, LLAlignment alignment, CGPoint offset);
+extern CGRect LL_CGFunction(Align)(const CGRect alignRect, CGRect rect, LLAlignment alignment);
+extern CGRect LL_CGFunction(PlaceSizeWithOffset)(const CGRect alignRect, CGSize size, LLAlignment alignment, CGPoint offset);
+extern CGRect LL_CGFunction(PlaceSize)(const CGRect alignRect, CGSize size, LLAlignment alignment);
 
